@@ -3,10 +3,10 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://wedding.example.com'),
-  title: 'Minh Anh & Quốc Huy — 15.02.2025',
+  title: 'Nhật Hào & Nhi Mai — 19.07.2026',
   description: 'Trân trọng kính mời bạn đến dự lễ cưới của chúng tôi',
   openGraph: {
-    title: 'Minh Anh & Quốc Huy — 15.02.2025',
+    title: 'Nhật Hào & Nhi Mai — 19.07.2026',
     description: 'Trân trọng kính mời bạn đến dự lễ cưới của chúng tôi',
     images: [{ url: 'https://sf-static.upanhlaylink.com/img/image_2026060452e76e6e912ea393abe4a00e3273607e.jpg' }],
   },
