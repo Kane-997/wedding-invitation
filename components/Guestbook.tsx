@@ -72,7 +72,7 @@ export default function Guestbook() {
 
         {/* Form */}
         <div
-          className="rounded-sm p-8 mb-10"
+          className="rounded-sm p-6 sm:p-8 mb-10"
           style={{
             background: 'rgba(255,255,255,0.9)',
             border: '1px solid #e8d5a3',

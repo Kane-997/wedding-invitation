@@ -1,7 +1,6 @@
 import Navigation from '@/components/Navigation';
 import Hero from '@/components/Hero';
 import Countdown from '@/components/Countdown';
-import LoveStory from '@/components/LoveStory';
 import Gallery from '@/components/Gallery';
 import Location from '@/components/Location';
 import RSVP from '@/components/RSVP';
@@ -16,7 +15,6 @@ export default function WeddingPage() {
       <Navigation />
       <Hero />
       <Countdown />
-      <LoveStory />
       <Gallery />
       <Location />
       <RSVP />

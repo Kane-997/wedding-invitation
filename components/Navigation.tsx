@@ -5,7 +5,7 @@ import { Menu, X, Heart } from 'lucide-react';
 
 const links = [
   { href: '#home', label: 'Trang chủ' },
-  { href: '#story', label: 'Tình yêu' },
+  { href: '#countdown', label: 'Đếm ngược' },
   { href: '#gallery', label: 'Ảnh cưới' },
   { href: '#location', label: 'Địa điểm' },
   { href: '#rsvp', label: 'RSVP' },
@@ -79,23 +79,25 @@ export default function Navigation() {
       {/* Mobile menu */}
       {open && (
         <div
-          className="md:hidden px-6 pb-6 pt-2"
+          className="md:hidden fixed top-16 left-0 right-0 bottom-0 z-40 overflow-y-auto"
           style={{
             background: 'rgba(255,254,249,0.98)',
             borderTop: '1px solid #e8d5a3',
           }}
         >
-          {links.map((link) => (
-            <a
-              key={link.href}
-              href={link.href}
-              className="block font-sans text-sm tracking-widest uppercase py-3"
-              style={{ color: '#7a5c2e', borderBottom: '1px solid #f5e6c8' }}
-              onClick={() => setOpen(false)}
-            >
-              {link.label}
-            </a>
-          ))}
+          <div className="px-6 py-4">
+            {links.map((link) => (
+              <a
+                key={link.href}
+                href={link.href}
+                className="block font-sans text-sm tracking-widest uppercase py-4 border-b"
+                style={{ color: '#7a5c2e', borderColor: '#f5e6c8' }}
+                onClick={() => setOpen(false)}
+              >
+                {link.label}
+              </a>
+            ))}
+          </div>
         </div>
       )}
     </nav>

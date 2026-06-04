@@ -66,7 +66,7 @@ export default function RSVP() {
         </div>
 
         <div
-          className="rounded-sm p-8 sm:p-10"
+          className="rounded-sm p-6 sm:p-8 md:p-10"
           style={{
             background: 'rgba(255,255,255,0.9)',
             border: '1px solid #e8d5a3',

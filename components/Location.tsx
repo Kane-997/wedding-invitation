@@ -46,7 +46,7 @@ export default function Location() {
           <div className="gold-divider mt-4" />
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid gap-6 md:gap-8 md:grid-cols-2">
           {venues.map((venue, i) => (
             <div
               key={i}
@@ -58,7 +58,7 @@ export default function Location() {
               }}
             >
               {/* Map */}
-              <div className="h-56 relative overflow-hidden">
+              <div className="h-40 md:h-56 relative overflow-hidden">
                 <iframe
                   src={venue.mapUrl}
                   className="w-full h-full border-0"

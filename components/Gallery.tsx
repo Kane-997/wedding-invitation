@@ -72,19 +72,33 @@ export default function Gallery() {
           <div className="gold-divider mt-4" />
         </div>
 
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 auto-rows-48">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-2 md:gap-3 auto-rows-40 md:auto-rows-48">
           {photos.map((photo, i) => (
             <div
               key={i}
-              className={`overflow-hidden cursor-pointer rounded-sm group ${photo.span}`}
-              style={{ minHeight: '180px' }}
+              className={`overflow-hidden cursor-pointer rounded-sm group hidden md:block ${photo.span}`}
+              style={{ minHeight: 'auto' }}
               onClick={() => setLightbox(i)}
             >
               <img
                 src={photo.thumb}
                 alt={`Wedding photo ${i + 1}`}
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                style={{ minHeight: '180px' }}
+              />
+            </div>
+          ))}
+          {/* Mobile simplified grid - show first 4 photos */}
+          {photos.slice(0, 4).map((photo, i) => (
+            <div
+              key={`mobile-${i}`}
+              className="overflow-hidden cursor-pointer rounded-sm group md:hidden"
+              style={{ minHeight: '160px' }}
+              onClick={() => setLightbox(i)}
+            >
+              <img
+                src={photo.thumb}
+                alt={`Wedding photo ${i + 1}`}
+                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
               />
             </div>
           ))}

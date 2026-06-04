@@ -65,7 +65,7 @@ export default function QRTransfer() {
           </p>
         </div>
 
-        <div className="grid sm:grid-cols-2 gap-6">
+        <div className="grid gap-6 md:grid-cols-2">
           {accounts.map((acc, i) => (
             <div
               key={i}
@@ -78,7 +78,7 @@ export default function QRTransfer() {
             >
               {/* Bank header */}
               <div
-                className="px-6 py-4 flex items-center gap-3"
+                className="px-4 md:px-6 py-3 md:py-4 flex items-center gap-3"
                 style={{ borderBottom: '1px solid #e8d5a3', background: 'rgba(212,175,55,0.06)' }}
               >
                 <span className="text-2xl">{acc.logo}</span>
@@ -93,7 +93,7 @@ export default function QRTransfer() {
               </div>
 
               {/* QR Code */}
-              <div className="flex justify-center py-6 px-4">
+              <div className="flex justify-center py-4 px-4 md:py-6">
                 <div
                   className="p-3 rounded-sm"
                   style={{ border: '1px solid #e8d5a3', background: 'white' }}
@@ -101,7 +101,7 @@ export default function QRTransfer() {
                   <img
                     src={acc.qr}
                     alt={`QR ${acc.bank}`}
-                    className="w-44 h-44 object-contain"
+                    className="w-36 h-36 md:w-44 md:h-44 object-contain"
                     onError={(e) => {
                       (e.target as HTMLImageElement).src =
                         `https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=${encodeURIComponent(`${acc.bank}|${acc.accountNumber}|${acc.accountName}|Mung cuoi Minh Anh Quoc Huy`)}`;
@@ -111,7 +111,7 @@ export default function QRTransfer() {
               </div>
 
               {/* Account details */}
-              <div className="px-6 pb-6 space-y-2">
+              <div className="px-4 md:px-6 pb-4 md:pb-6 space-y-2">
                 <div className="flex items-center justify-between">
                   <span className="font-sans text-xs uppercase tracking-widest" style={{ color: '#b8962e' }}>
                     Số tài khoản

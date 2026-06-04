@@ -77,13 +77,13 @@ export default function Countdown() {
         <div className="gold-divider mb-10" />
 
         {!time.past ? (
-          <div className="flex items-start justify-center gap-4 sm:gap-8">
+          <div className="flex items-start justify-center gap-1 sm:gap-3 flex-wrap">
             <TimeBox value={time.days} label="Ngày" />
-            <div className="font-serif text-4xl mt-6" style={{ color: '#d4af37' }}>:</div>
+            <div className="font-serif text-2xl sm:text-4xl mt-6 hidden sm:block" style={{ color: '#d4af37' }}>:</div>
             <TimeBox value={time.hours} label="Giờ" />
-            <div className="font-serif text-4xl mt-6" style={{ color: '#d4af37' }}>:</div>
+            <div className="font-serif text-2xl sm:text-4xl mt-6 hidden sm:block" style={{ color: '#d4af37' }}>:</div>
             <TimeBox value={time.minutes} label="Phút" />
-            <div className="font-serif text-4xl mt-6" style={{ color: '#d4af37' }}>:</div>
+            <div className="font-serif text-2xl sm:text-4xl mt-6 hidden sm:block" style={{ color: '#d4af37' }}>:</div>
             <TimeBox value={time.seconds} label="Giây" />
           </div>
         ) : (
