@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Minh Anh & Quốc Huy — 15.02.2025',
     description: 'Trân trọng kính mời bạn đến dự lễ cưới của chúng tôi',
-    images: [{ url: 'https://images.pexels.com/photos/1024993/pexels-photo-1024993.jpeg' }],
+    images: [{ url: 'https://sf-static.upanhlaylink.com/img/image_2026060452e76e6e912ea393abe4a00e3273607e.jpg' }],
   },
 };
 
