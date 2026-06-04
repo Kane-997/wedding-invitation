@@ -36,7 +36,7 @@ export default function Hero() {
       <div
         className="relative z-10 w-full px-4 sm:px-6 md:px-0 md:w-1/3 lg:w-2/5 flex items-end md:items-center justify-center md:justify-end pb-6 md:pb-0 md:pr-12 min-h-screen md:min-h-0"
         style={{
-          opacity: visible ? 1 : 0,
+          opacity: visible ? 0.5 : 0,
           transform: visible ? 'translateY(0)' : 'translateY(40px)',
           transition: 'all 1s ease-out 0.3s',
         }}
