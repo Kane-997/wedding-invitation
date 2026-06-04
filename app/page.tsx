@@ -4,7 +4,7 @@ import Countdown from '@/components/Countdown';
 import Gallery from '@/components/Gallery';
 import Location from '@/components/Location';
 import RSVP from '@/components/RSVP';
-import Guestbook from '@/components/Guestbook';
+import Wishes from '@/components/Wishes';
 import QRTransfer from '@/components/QRTransfer';
 import MusicPlayer from '@/components/MusicPlayer';
 import Footer from '@/components/Footer';
@@ -18,7 +18,7 @@ export default function WeddingPage() {
       <Gallery />
       <Location />
       <RSVP />
-      <Guestbook />
+      <Wishes />
       <QRTransfer />
       <Footer />
       <MusicPlayer />

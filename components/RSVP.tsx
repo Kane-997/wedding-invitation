@@ -9,7 +9,7 @@ const initialForm: RSVPInsert = {
   email: '',
   attending: true,
   guests: 0,
-  message: '',
+  message: '', // Used as wish message
 };
 
 export default function RSVP() {
@@ -51,13 +51,13 @@ export default function RSVP() {
       <div className="max-w-2xl mx-auto">
         <div className="text-center mb-12">
           <p className="font-sans text-xs tracking-[0.4em] uppercase mb-4" style={{ color: '#b8962e' }}>
-            Xác nhận tham dự
+            Phản hồi từ khách mời
           </p>
           <h2
             className="font-serif"
             style={{ fontSize: 'clamp(2.2rem, 5vw, 3.5rem)', fontWeight: 300, color: '#5c3d1a' }}
           >
-            RSVP
+            Xác Nhận Tham Dự
           </h2>
           <div className="gold-divider mt-4 mb-6" />
           <p className="font-sans text-sm" style={{ color: '#7a5c2e', lineHeight: 1.8 }}>
@@ -168,7 +168,7 @@ export default function RSVP() {
 
               <div>
                 <label className="font-sans text-xs tracking-widest uppercase block mb-2" style={{ color: '#b8962e' }}>
-                  Lời nhắn (tùy chọn)
+                  Lời chúc (tùy chọn)
                 </label>
                 <textarea
                   value={form.message}
@@ -198,7 +198,7 @@ export default function RSVP() {
                 }}
               >
                 <Send size={16} />
-                {loading ? 'Đang gửi...' : 'Xác nhận tham dự'}
+                {loading ? 'Đang gửi...' : 'Gửi xác nhận'}
               </button>
             </form>
           )}

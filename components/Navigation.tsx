@@ -8,8 +8,8 @@ const links = [
   { href: '#countdown', label: 'Đếm ngược' },
   { href: '#gallery', label: 'Ảnh cưới' },
   { href: '#location', label: 'Địa điểm' },
-  { href: '#rsvp', label: 'RSVP' },
-  { href: '#guestbook', label: 'Lưu bút' },
+  { href: '#rsvp', label: 'Xác nhận' },
+  { href: '#wishes', label: 'Lời chúc' },
   { href: '#gift', label: 'Mừng cưới' },
 ];
 
