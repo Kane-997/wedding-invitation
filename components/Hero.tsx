@@ -22,7 +22,7 @@ export default function Hero() {
         <img
           src="/SUKA9135.jpg"
           alt="Wedding"
-          className="w-85% h-85% object-cover md:object-contain"
+          className="w-50% h-50% object-cover md:object-contain"
           style={{ backgroundSize: 'cover', backgroundPosition: 'center' }}
         />
         {/* Dark overlay for mobile */}
