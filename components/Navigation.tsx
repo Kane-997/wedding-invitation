@@ -46,7 +46,7 @@ export default function Navigation() {
             className="font-serif text-lg"
             style={{ color: scrolled ? '#5c3d1a' : '#8a6820', fontWeight: 400 }}
           >
-            MA & QH
+            H & N
           </span>
         </a>
 
