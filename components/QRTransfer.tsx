@@ -139,7 +139,7 @@ export default function QRTransfer() {
                     <span className="font-sans text-xs" style={{ color: '#7a5c2e' }}>
                       Mung cuoi H va N
                     </span>
-                    <CopyButton text="Mung cuoi Minh Anh Quoc Huy" />
+                    <CopyButton text="Mung cuoi Nhat Hao Nhi Mai" />
                   </div>
                 </div>
               </div>
