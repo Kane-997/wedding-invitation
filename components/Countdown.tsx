@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from 'react';
 
-const WEDDING_DATE = new Date('2026-07-19T10:00:00');
+const WEDDING_DATE = new Date('2026-07-19T17:30:00');
 
 function getTimeLeft() {
   const now = new Date();
@@ -93,7 +93,7 @@ export default function Countdown() {
         )}
 
         <p className="font-sans text-sm mt-10 tracking-wider" style={{ color: '#9a7a3a' }}>
-          Chủ Nhật, ngày 19 tháng 07 năm 2026 • 10:00 sáng
+          Chủ Nhật, ngày 19 tháng 07 năm 2026 • 17:30 sáng
         </p>
       </div>
     </section>
