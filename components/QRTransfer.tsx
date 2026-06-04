@@ -5,10 +5,10 @@ import { useState } from 'react';
 
 const accounts = [
   {
-    bank: 'Vietcombank',
+    bank: 'VP Bank',
     logo: '🏦',
-    accountNumber: '1234567890',
-    accountName: 'NGUYEN MINH ANH',
+    accountNumber: '172843409',
+    accountName: 'Trần Nhật Hào',
     branch: 'Chi nhánh TP.HCM',
     qr: 'https://img.vietqr.io/image/VCB-1234567890-compact2.png?amount=0&addInfo=Mung%20cuoi%20Minh%20Anh%20Quoc%20Huy&accountName=NGUYEN%20MINH%20ANH',
   },
@@ -137,7 +137,7 @@ export default function QRTransfer() {
                   </span>
                   <div className="flex items-center">
                     <span className="font-sans text-xs" style={{ color: '#7a5c2e' }}>
-                      Mung cuoi MA QH
+                      Mung cuoi H va N
                     </span>
                     <CopyButton text="Mung cuoi Minh Anh Quoc Huy" />
                   </div>
