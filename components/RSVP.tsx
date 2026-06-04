@@ -61,7 +61,7 @@ export default function RSVP() {
           </h2>
           <div className="gold-divider mt-4 mb-6" />
           <p className="font-sans text-sm" style={{ color: '#7a5c2e', lineHeight: 1.8 }}>
-            Vui lòng xác nhận trước ngày <strong>01/02/2025</strong> để chúng tôi chuẩn bị tốt nhất.
+            Vui lòng xác nhận trước ngày <strong>06/07/2026</strong> để chúng tôi chuẩn bị tốt nhất.
           </p>
         </div>
 
