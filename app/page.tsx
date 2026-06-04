@@ -16,9 +16,9 @@ export default function WeddingPage() {
       <Hero />
       <Countdown />
       <Gallery />
-      <Location />
-      <RSVP />
       <Wishes />
+      <RSVP />
+      <Location />
       <QRTransfer />
       <Footer />
       <MusicPlayer />

@@ -44,6 +44,16 @@ const photos = [
     thumb: 'https://images.pexels.com/photos/1114425/pexels-photo-1114425.jpeg?auto=compress&cs=tinysrgb&w=400',
     span: '',
   },
+  {
+    src: 'https://images.pexels.com/photos/2649956/pexels-photo-2649956.jpeg?auto=compress&cs=tinysrgb&w=800',
+    thumb: 'https://images.pexels.com/photos/2649956/pexels-photo-2649956.jpeg?auto=compress&cs=tinysrgb&w=400',
+    span: 'col-span-2 row-span-2',
+  },
+  {
+    src: 'https://images.pexels.com/photos/1761279/pexels-photo-1761279.jpeg?auto=compress&cs=tinysrgb&w=800',
+    thumb: 'https://images.pexels.com/photos/1761279/pexels-photo-1761279.jpeg?auto=compress&cs=tinysrgb&w=400',
+    span: '',
+  },
 ];
 
 export default function Gallery() {
@@ -87,8 +97,8 @@ export default function Gallery() {
               />
             </div>
           ))}
-          {/* Mobile simplified grid - show first 4 photos */}
-          {photos.slice(0, 4).map((photo, i) => (
+          {/* Mobile simplified grid - show first 6 photos */}
+          {photos.slice(0, 6).map((photo, i) => (
             <div
               key={`mobile-${i}`}
               className="overflow-hidden cursor-pointer rounded-sm group md:hidden"
