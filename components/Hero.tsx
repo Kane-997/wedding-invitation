@@ -20,7 +20,7 @@ export default function Hero() {
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <img
-          src="/image.png"
+          src="/SUKA9135.jpg"
           alt="Wedding"
           className="w-full h-full object-cover md:object-contain"
           style={{ backgroundSize: 'cover', backgroundPosition: 'center' }}
