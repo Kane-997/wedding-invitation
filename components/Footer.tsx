@@ -19,13 +19,13 @@ export default function Footer() {
         className="font-serif mb-2"
         style={{ fontSize: '2rem', fontWeight: 300, color: '#8a6820' }}
       >
-        Minh Anh & Quốc Huy
+        Nhật Hào & Nhi Mai
       </h3>
       <p
         className="font-sans text-xs tracking-[0.35em] uppercase mb-6"
         style={{ color: '#b8962e' }}
       >
-        15 tháng 02 năm 2025
+        19 tháng 07 năm 2026
       </p>
 
       <p className="font-sans text-sm italic" style={{ color: '#9a7a3a' }}>
