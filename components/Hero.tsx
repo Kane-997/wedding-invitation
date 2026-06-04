@@ -115,7 +115,7 @@ export default function Hero() {
                   Giờ
                 </p>
                 <p className="font-sans text-sm" style={{ color: '#5c3d1a' }}>
-                  17:30 Pm
+                  17:30 PM
                 </p>
               </div>
             </div>
@@ -126,7 +126,7 @@ export default function Hero() {
                   Địa điểm
                 </p>
                 <p className="font-sans text-sm" style={{ color: '#5c3d1a' }}>
-                  Trung tâm Tiệc cưới Capella
+                  Trung tâm Tiệc cưới Grand Palace (Sáu Cao 2)
                 </p>
               </div>
             </div>
