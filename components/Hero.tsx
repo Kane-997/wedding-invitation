@@ -84,7 +84,7 @@ export default function Hero() {
                 color: '#5c3d1a',
               }}
             >
-              Minh Anh & Quốc Huy
+              Nhật Hào & Nhi Mai
             </h1>
           </div>
 
@@ -104,7 +104,7 @@ export default function Hero() {
                   Ngày
                 </p>
                 <p className="font-sans text-sm" style={{ color: '#5c3d1a' }}>
-                  Chủ Nhật, 15 tháng 02, 2025
+                  Chủ Nhật, 19 tháng 07, 2026
                 </p>
               </div>
             </div>
@@ -115,7 +115,7 @@ export default function Hero() {
                   Giờ
                 </p>
                 <p className="font-sans text-sm" style={{ color: '#5c3d1a' }}>
-                  11:00 sáng
+                  17:30 Pm
                 </p>
               </div>
             </div>
