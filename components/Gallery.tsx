@@ -7,57 +7,74 @@ const photos = [
   {
     src: 'https://sf-static.upanhlaylink.com/img/image_20260604b4b98cb0a20ce5429b15757850e5b643.jpg?auto=compress&cs=tinysrgb&w=800',
     thumb: 'https://sf-static.upanhlaylink.com/img/image_20260604b4b98cb0a20ce5429b15757850e5b643.jpg?auto=compress&cs=tinysrgb&w=400',
-    span: 'col-span-2 row-span-2',
   },
   {
     src: 'https://sf-static.upanhlaylink.com/img/image_20260604696900d55b961dcabe358e29fce6f1d8.jpg?auto=compress&cs=tinysrgb&w=800',
     thumb: 'https://sf-static.upanhlaylink.com/img/image_20260604696900d55b961dcabe358e29fce6f1d8.jpg?auto=compress&cs=tinysrgb&w=400',
-    span: '',
   },
   {
     src: 'https://sf-static.upanhlaylink.com/img/image_20260604591faa1b94f3fff6a0741eb4a3dc2f6d.jpg?auto=compress&cs=tinysrgb&w=800',
     thumb: 'https://sf-static.upanhlaylink.com/img/image_20260604591faa1b94f3fff6a0741eb4a3dc2f6d.jpg?auto=compress&cs=tinysrgb&w=400',
-    span: '',
   },
   {
     src: 'https://sf-static.upanhlaylink.com/img/image_202606041519dbdec222ef0cdba96a64418cf56d.jpg?auto=compress&cs=tinysrgb&w=800',
     thumb: 'https://sf-static.upanhlaylink.com/img/image_202606041519dbdec222ef0cdba96a64418cf56d.jpg?auto=compress&cs=tinysrgb&w=400',
-    span: '',
   },
   {
     src: 'https://sf-static.upanhlaylink.com/img/image_20260604d82266a505ea901b32bbdb48548c5f86.jpg?auto=compress&cs=tinysrgb&w=800',
     thumb: 'https://sf-static.upanhlaylink.com/img/image_20260604d82266a505ea901b32bbdb48548c5f86.jpg?auto=compress&cs=tinysrgb&w=400',
-    span: '',
   },
   {
     src: 'https://sf-static.upanhlaylink.com/img/image_2026060413929522f844629f1a459308b27707a2.jpg?auto=compress&cs=tinysrgb&w=800',
     thumb: 'https://sf-static.upanhlaylink.com/img/image_2026060413929522f844629f1a459308b27707a2.jpg?auto=compress&cs=tinysrgb&w=400',
-    span: 'col-span-2',
   },
   {
     src: 'https://sf-static.upanhlaylink.com/img/image_202606049b884b0b41b7c2d22be677f79cfa24f4.jpg?auto=compress&cs=tinysrgb&w=800',
     thumb: 'https://sf-static.upanhlaylink.com/img/image_202606049b884b0b41b7c2d22be677f79cfa24f4.jpg?auto=compress&cs=tinysrgb&w=400',
-    span: '',
   },
   {
     src: 'https://sf-static.upanhlaylink.com/img/image_20260604a27d98cdd879840f9d6718ed84080140.jpg?auto=compress&cs=tinysrgb&w=800',
     thumb: 'https://sf-static.upanhlaylink.com/img/image_20260604a27d98cdd879840f9d6718ed84080140.jpg?auto=compress&cs=tinysrgb&w=400',
-    span: '',
   },
   {
     src: 'https://sf-static.upanhlaylink.com/img/image_202606042daef4d690d668995f93c7b5c4b5c3f6.jpg?auto=compress&cs=tinysrgb&w=800',
     thumb: 'https://sf-static.upanhlaylink.com/img/image_202606042daef4d690d668995f93c7b5c4b5c3f6.jpg?auto=compress&cs=tinysrgb&w=400',
-    span: 'col-span-2 row-span-2',
   },
   {
     src: 'https://sf-static.upanhlaylink.com/img/image_202606042124284c1b0c2e222a1cf58814244118.jpg?auto=compress&cs=tinysrgb&w=800',
     thumb: 'https://sf-static.upanhlaylink.com/img/image_202606042124284c1b0c2e222a1cf58814244118.jpg?auto=compress&cs=tinysrgb&w=400',
-    span: '',
   },
   {
     src: 'https://sf-static.upanhlaylink.com/img/image_20260604ef8f691b19eb44fad0c2deedf6cd10ec.jpg?auto=compress&cs=tinysrgb&w=800',
     thumb: 'https://sf-static.upanhlaylink.com/img/image_20260604ef8f691b19eb44fad0c2deedf6cd10ec.jpg?auto=compress&cs=tinysrgb&w=400',
-    span: '',
+  },
+];
+
+const sections: Array<{ type: string; photos?: number[]; layout?: string; title?: string; text?: string }> = [
+  {
+    type: 'gallery',
+    photos: [0, 1, 2],
+    layout: 'row',
+  },
+  {
+    type: 'text',
+    title: 'OUR LOVE STORY',
+    text: 'From the first moment we met, we knew it was something special. Our journey together has been filled with love, laughter, and countless beautiful memories.',
+  },
+  {
+    type: 'gallery',
+    photos: [3, 4, 5],
+    layout: 'varied',
+  },
+  {
+    type: 'text',
+    title: 'TAKE ME TO YOUR HEART',
+    text: 'Take me to your heart, take me to your soul. Give your hand before I\'m old. Show me what love is, haven\'t got a clue.',
+  },
+  {
+    type: 'gallery',
+    photos: [6, 7, 8, 9, 10],
+    layout: 'mixed',
   },
 ];
 
@@ -67,14 +84,70 @@ export default function Gallery() {
   const prev = () => setLightbox((p) => (p !== null ? (p - 1 + photos.length) % photos.length : null));
   const next = () => setLightbox((p) => (p !== null ? (p + 1) % photos.length : null));
 
+  const renderGalleryRow = (photoIndices: number[], layoutType: string) => {
+    if (layoutType === 'row') {
+      return (
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
+          {photoIndices.map((idx) => (
+            <div
+              key={idx}
+              className="overflow-hidden cursor-pointer rounded-sm group"
+              onClick={() => setLightbox(idx)}
+            >
+              <img
+                src={photos[idx].thumb}
+                alt={`Wedding photo ${idx + 1}`}
+                className="w-full h-64 md:h-72 object-cover transition-transform duration-700 group-hover:scale-105"
+              />
+            </div>
+          ))}
+        </div>
+      );
+    } else if (layoutType === 'varied') {
+      return (
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
+          <div className="md:col-span-2 overflow-hidden cursor-pointer rounded-sm group" onClick={() => setLightbox(photoIndices[0])}>
+            <img src={photos[photoIndices[0]].thumb} alt="Wedding photo" className="w-full h-72 md:h-80 object-cover transition-transform duration-700 group-hover:scale-105" />
+          </div>
+          <div className="grid grid-cols-2 gap-4 md:gap-6 md:grid-cols-1">
+            {[photoIndices[1], photoIndices[2]].map((idx) => (
+              <div key={idx} className="overflow-hidden cursor-pointer rounded-sm group" onClick={() => setLightbox(idx)}>
+                <img src={photos[idx].thumb} alt="Wedding photo" className="w-full h-36 md:h-36 object-cover transition-transform duration-700 group-hover:scale-105" />
+              </div>
+            ))}
+          </div>
+        </div>
+      );
+    } else if (layoutType === 'mixed') {
+      return (
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-4 md:gap-6 auto-rows-64 md:auto-rows-72">
+          {photoIndices.map((idx, pos) => {
+            let spanClass = '';
+            if (pos === 0) spanClass = 'md:col-span-2 md:row-span-2';
+            else if (pos === 3) spanClass = 'md:col-span-2';
+            return (
+              <div
+                key={idx}
+                className={`overflow-hidden cursor-pointer rounded-sm group ${spanClass}`}
+                onClick={() => setLightbox(idx)}
+              >
+                <img src={photos[idx].thumb} alt="Wedding photo" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+              </div>
+            );
+          })}
+        </div>
+      );
+    }
+  };
+
   return (
     <section
       id="gallery"
-      className="py-24 px-6"
+      className="py-16 md:py-28 px-6"
       style={{ background: 'linear-gradient(180deg, #fdf6e9 0%, #fffef9 100%)' }}
     >
-      <div className="max-w-5xl mx-auto">
-        <div className="text-center mb-14">
+      <div className="max-w-6xl mx-auto">
+        <div className="text-center mb-16 md:mb-20">
           <p className="font-sans text-xs tracking-[0.4em] uppercase mb-4" style={{ color: '#b8962e' }}>
             Khoảnh khắc của chúng tôi
           </p>
@@ -87,34 +160,26 @@ export default function Gallery() {
           <div className="gold-divider mt-4" />
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-2 md:gap-3 auto-rows-40 md:auto-rows-48">
-          {photos.map((photo, i) => (
-            <div
-              key={i}
-              className={`overflow-hidden cursor-pointer rounded-sm group hidden md:block ${photo.span}`}
-              style={{ minHeight: 'auto' }}
-              onClick={() => setLightbox(i)}
-            >
-              <img
-                src={photo.thumb}
-                alt={`Wedding photo ${i + 1}`}
-                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-              />
-            </div>
-          ))}
-          {/* Mobile simplified grid - show first 7 photos */}
-          {photos.slice(0, 7).map((photo, i) => (
-            <div
-              key={`mobile-${i}`}
-              className="overflow-hidden cursor-pointer rounded-sm group md:hidden"
-              style={{ minHeight: '160px' }}
-              onClick={() => setLightbox(i)}
-            >
-              <img
-                src={photo.thumb}
-                alt={`Wedding photo ${i + 1}`}
-                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-              />
+        <div className="space-y-16 md:space-y-20">
+          {sections.map((section, idx) => (
+            <div key={idx}>
+              {section.type === 'gallery' && renderGalleryRow(section.photos!, section.layout!)}
+              {section.type === 'text' && (
+                <div className="py-12 md:py-16 flex flex-col items-center justify-center text-center max-w-3xl mx-auto">
+                  <h3
+                    className="font-serif text-4xl md:text-5xl mb-6"
+                    style={{ fontWeight: 300, color: '#5c3d1a', lineHeight: 1.3 }}
+                  >
+                    {section.title}
+                  </h3>
+                  <p
+                    className="font-sans text-base md:text-lg leading-relaxed"
+                    style={{ color: '#7a5c2e', lineHeight: 1.8 }}
+                  >
+                    {section.text}
+                  </p>
+                </div>
+              )}
             </div>
           ))}
         </div>
