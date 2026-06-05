@@ -64,56 +64,34 @@ function TimelineItem({ event, index }: { event: (typeof events)[0]; index: numb
   return (
     <div
       ref={ref}
-      className={`relative flex items-center gap-0 md:gap-8 ${isLeft ? 'md:flex-row' : 'md:flex-row-reverse'} flex-col mb-16`}
+      className="relative flex flex-col mb-12"
       style={{
         opacity: visible ? 1 : 0,
         transform: visible ? 'translateY(0)' : 'translateY(40px)',
-        transition: `all 0.8s ease-out ${index * 0.15}s`,
+        transition: `all 0.6s ease-out ${index * 0.1}s`,
       }}
     >
-      {/* Content card */}
-      <div className={`w-full md:w-5/12 ${isLeft ? 'md:text-right' : 'md:text-left'} text-center md:px-0 px-4`}>
-        <span
-          className="font-sans text-xs tracking-[0.35em] uppercase block mb-2"
-          style={{ color: '#d4af37' }}
-        >
+      <div className="text-center px-4">
+        <span className="font-sans text-xs tracking-[0.35em] uppercase block mb-2" style={{ color: '#d4af37' }}>
           {event.year}
         </span>
-        <h3
-          className="font-serif mb-3"
-          style={{ fontSize: '1.6rem', fontWeight: 400, color: '#5c3d1a' }}
-        >
+        <h3 className="font-serif text-lg mb-2" style={{ fontWeight: 400, color: '#5c3d1a' }}>
           {event.title}
         </h3>
-        <p className="font-sans text-sm leading-relaxed" style={{ color: '#7a5c2e', lineHeight: 1.8 }}>
+        <p className="font-sans text-sm" style={{ color: '#7a5c2e', lineHeight: 1.6 }}>
           {event.description}
         </p>
       </div>
 
-      {/* Center dot */}
-      <div className="relative z-10 flex-shrink-0 my-4 md:my-0">
-        <div
-          className="w-10 h-10 rounded-full flex items-center justify-center"
-          style={{
-            background: 'linear-gradient(135deg, #d4af37, #f5e6c8)',
-            boxShadow: '0 0 0 4px #fdf6e9, 0 0 0 6px #d4af3740',
-          }}
-        >
-          <Heart fill="white" stroke="white" size={16} />
+      <div className="my-3 flex justify-center">
+        <div className="w-8 h-8 rounded-full flex items-center justify-center" style={{ background: 'linear-gradient(135deg, #d4af37, #f5e6c8)', boxShadow: '0 0 0 4px #fdf6e9' }}>
+          <Heart fill="white" stroke="white" size={14} />
         </div>
       </div>
 
-      {/* Image */}
-      <div className="w-full md:w-5/12 px-4 md:px-0">
-        <div
-          className="overflow-hidden rounded-sm"
-          style={{ boxShadow: '0 8px 32px rgba(139,100,32,0.18)' }}
-        >
-          <img
-            src={event.image}
-            alt={event.title}
-            className="w-full h-56 object-cover transition-transform duration-700 hover:scale-105"
-          />
+      <div className="px-4">
+        <div className="overflow-hidden rounded-sm" style={{ boxShadow: '0 8px 32px rgba(139,100,32,0.18)' }}>
+          <img src={event.image} alt={event.title} className="w-full h-40 object-cover" loading="lazy" />
         </div>
       </div>
     </div>
@@ -122,31 +100,19 @@ function TimelineItem({ event, index }: { event: (typeof events)[0]; index: numb
 
 export default function LoveStory() {
   return (
-    <section
-      id="story"
-      className="py-24 px-6"
-      style={{ background: 'linear-gradient(180deg, #fffef9 0%, #fdf6e9 100%)' }}
-    >
-      <div className="max-w-5xl mx-auto">
-        <div className="text-center mb-16">
+    <section id="story" className="py-12 px-4" style={{ background: 'linear-gradient(180deg, #fffef9 0%, #fdf6e9 100%)' }}>
+      <div className="max-w-lg mx-auto">
+        <div className="text-center mb-10">
           <p className="font-sans text-xs tracking-[0.4em] uppercase mb-4" style={{ color: '#b8962e' }}>
             Hành trình của chúng tôi
           </p>
-          <h2
-            className="font-serif"
-            style={{ fontSize: 'clamp(2.2rem, 5vw, 3.5rem)', fontWeight: 300, color: '#5c3d1a' }}
-          >
+          <h2 className="font-serif text-3xl mb-3" style={{ fontWeight: 300, color: '#5c3d1a' }}>
             Chuyện tình yêu
           </h2>
-          <div className="gold-divider mt-4" />
+          <div className="gold-divider" />
         </div>
 
-        {/* Vertical line on md+ */}
         <div className="relative">
-          <div
-            className="absolute left-1/2 top-0 bottom-0 w-px hidden md:block"
-            style={{ background: 'linear-gradient(to bottom, transparent, #d4af37 10%, #d4af37 90%, transparent)', transform: 'translateX(-50%)' }}
-          />
           {events.map((event, i) => (
             <TimelineItem key={i} event={event} index={i} />
           ))}

@@ -43,29 +43,22 @@ function CopyButton({ text }: { text: string }) {
 
 export default function QRTransfer() {
   return (
-    <section
-      id="gift"
-      className="py-24 px-6"
-      style={{ background: 'linear-gradient(180deg, #fdf6e9 0%, #fffef9 100%)' }}
-    >
-      <div className="max-w-4xl mx-auto">
-        <div className="text-center mb-12">
+    <section id="gift" className="py-12 px-4" style={{ background: 'linear-gradient(180deg, #fdf6e9 0%, #fffef9 100%)' }}>
+      <div className="max-w-lg mx-auto">
+        <div className="text-center mb-8">
           <p className="font-sans text-xs tracking-[0.4em] uppercase mb-4" style={{ color: '#b8962e' }}>
             Mừng cưới
           </p>
-          <h2
-            className="font-serif"
-            style={{ fontSize: 'clamp(2.2rem, 5vw, 3.5rem)', fontWeight: 300, color: '#5c3d1a' }}
-          >
+          <h2 className="font-serif text-3xl mb-3" style={{ fontWeight: 300, color: '#5c3d1a' }}>
             Hộp quà yêu thương
           </h2>
-          <div className="gold-divider mt-4 mb-6" />
-          <p className="font-sans text-sm max-w-lg mx-auto" style={{ color: '#7a5c2e', lineHeight: 1.8 }}>
-            Sự hiện diện của bạn là món quà quý giá nhất. Nếu bạn muốn tặng quà, chúng tôi xin chân thành cảm ơn.
+          <div className="gold-divider mb-4" />
+          <p className="font-sans text-xs" style={{ color: '#7a5c2e', lineHeight: 1.6 }}>
+            Sự hiện diện của bạn là quà quý giá nhất.
           </p>
         </div>
 
-        <div className="grid gap-6 md:grid-cols-2">
+        <div className="space-y-4">
           {accounts.map((acc, i) => (
             <div
               key={i}
@@ -76,12 +69,8 @@ export default function QRTransfer() {
                 boxShadow: '0 8px 40px rgba(139,100,32,0.12)',
               }}
             >
-              {/* Bank header */}
-              <div
-                className="px-4 md:px-6 py-3 md:py-4 flex items-center gap-3"
-                style={{ borderBottom: '1px solid #e8d5a3', background: 'rgba(212,175,55,0.06)' }}
-              >
-                <span className="text-2xl">{acc.logo}</span>
+              <div className="px-3 py-3 flex items-center gap-2" style={{ borderBottom: '1px solid #e8d5a3', background: 'rgba(212,175,55,0.06)' }}>
+                <span className="text-xl">{acc.logo}</span>
                 <div>
                   <p className="font-sans text-sm font-medium" style={{ color: '#5c3d1a' }}>
                     {acc.bank}
@@ -92,52 +81,47 @@ export default function QRTransfer() {
                 </div>
               </div>
 
-              {/* QR Code */}
-              <div className="flex justify-center py-4 px-4 md:py-6">
-                <div
-                  className="p-3 rounded-sm"
-                  style={{ border: '1px solid #e8d5a3', background: 'white' }}
-                >
+              <div className="flex justify-center py-3 px-3">
+                <div className="p-2 rounded-sm" style={{ border: '1px solid #e8d5a3', background: 'white' }}>
                   <img
                     src={acc.qr}
                     alt={`QR ${acc.bank}`}
-                    className="w-36 h-36 md:w-44 md:h-44 object-contain"
+                    className="w-32 h-32 object-contain"
                     onError={(e) => {
                       (e.target as HTMLImageElement).src =
-                        `https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=${encodeURIComponent(`${acc.bank}|${acc.accountNumber}|${acc.accountName}|Mung cuoi Minh Anh Quoc Huy`)}`;
+                        `https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${encodeURIComponent(`${acc.bank}|${acc.accountNumber}|${acc.accountName}|Mung cuoi`)}`;
                     }}
                   />
                 </div>
               </div>
 
-              {/* Account details */}
-              <div className="px-4 md:px-6 pb-4 md:pb-6 space-y-2">
-                <div className="flex items-center justify-between">
-                  <span className="font-sans text-xs uppercase tracking-widest" style={{ color: '#b8962e' }}>
-                    Số tài khoản
+              <div className="px-3 pb-3 space-y-2 text-xs">
+                <div className="flex justify-between items-center">
+                  <span className="font-sans text-xs uppercase tracking-wider" style={{ color: '#b8962e' }}>
+                    STK
                   </span>
                   <div className="flex items-center">
-                    <span className="font-sans text-sm font-medium" style={{ color: '#5c3d1a' }}>
+                    <span className="font-sans text-xs font-medium" style={{ color: '#5c3d1a' }}>
                       {acc.accountNumber}
                     </span>
                     <CopyButton text={acc.accountNumber} />
                   </div>
                 </div>
-                <div className="flex items-center justify-between">
-                  <span className="font-sans text-xs uppercase tracking-widest" style={{ color: '#b8962e' }}>
-                    Chủ tài khoản
+                <div className="flex justify-between items-center">
+                  <span className="font-sans text-xs uppercase tracking-wider" style={{ color: '#b8962e' }}>
+                    Chủ TK
                   </span>
-                  <span className="font-sans text-sm font-medium" style={{ color: '#5c3d1a' }}>
+                  <span className="font-sans text-xs font-medium" style={{ color: '#5c3d1a' }}>
                     {acc.accountName}
                   </span>
                 </div>
-                <div className="flex items-center justify-between">
-                  <span className="font-sans text-xs uppercase tracking-widest" style={{ color: '#b8962e' }}>
-                    Nội dung CK
+                <div className="flex justify-between items-center">
+                  <span className="font-sans text-xs uppercase tracking-wider" style={{ color: '#b8962e' }}>
+                    Nội dung
                   </span>
                   <div className="flex items-center">
                     <span className="font-sans text-xs" style={{ color: '#7a5c2e' }}>
-                      Mung cuoi H va N
+                      Mung cuoi
                     </span>
                     <CopyButton text="Mung cuoi Nhat Hao Nhi Mai" />
                   </div>
@@ -147,10 +131,10 @@ export default function QRTransfer() {
           ))}
         </div>
 
-        <div className="text-center mt-10">
-          <Gift size={20} className="inline-block mr-2" style={{ color: '#d4af37' }} />
-          <span className="font-sans text-sm italic" style={{ color: '#9a7a3a' }}>
-            Chúng tôi trân trọng mọi tình cảm của bạn dành cho chúng tôi
+        <div className="text-center mt-6">
+          <Gift size={16} className="inline-block mr-1" style={{ color: '#d4af37' }} />
+          <span className="font-sans text-xs italic" style={{ color: '#9a7a3a' }}>
+            Cảm ơn tình cảm của bạn
           </span>
         </div>
       </div>

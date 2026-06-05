@@ -37,26 +37,19 @@ const venues = [
 
 export default function Location() {
   return (
-    <section
-      id="location"
-      className="py-24 px-6"
-      style={{ background: 'linear-gradient(180deg, #fffef9 0%, #fdf6e9 100%)' }}
-    >
-      <div className="max-w-5xl mx-auto">
-        <div className="text-center mb-14">
+    <section id="location" className="py-12 px-4" style={{ background: 'linear-gradient(180deg, #fffef9 0%, #fdf6e9 100%)' }}>
+      <div className="max-w-lg mx-auto">
+        <div className="text-center mb-10">
           <p className="font-sans text-xs tracking-[0.4em] uppercase mb-4" style={{ color: '#b8962e' }}>
             Địa điểm tổ chức
           </p>
-          <h2
-            className="font-serif"
-            style={{ fontSize: 'clamp(2.2rem, 5vw, 3.5rem)', fontWeight: 300, color: '#5c3d1a' }}
-          >
+          <h2 className="font-serif text-3xl mb-3" style={{ fontWeight: 300, color: '#5c3d1a' }}>
             Thời gian & Địa điểm
           </h2>
-          <div className="gold-divider mt-4" />
+          <div className="gold-divider" />
         </div>
 
-        <div className="grid gap-6 md:gap-8 md:grid-cols-2">
+        <div className="space-y-5">
           {venues.map((venue, i) => (
             <div
               key={i}
@@ -68,7 +61,7 @@ export default function Location() {
               }}
             >
               {/* Map */}
-              <div className="h-40 md:h-56 relative overflow-hidden">
+              <div className="h-40 relative overflow-hidden">
                 <iframe
                   src={venue.mapUrl}
                   className="w-full h-full border-0"
@@ -123,19 +116,11 @@ export default function Location() {
                   href={venue.directionsUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="mt-6 inline-flex items-center gap-2 font-sans text-xs tracking-[0.2em] uppercase transition-all duration-300 px-5 py-2.5 rounded-sm"
+                  className="mt-4 inline-flex items-center gap-2 font-sans text-xs tracking-[0.2em] uppercase px-4 py-2 rounded-sm"
                   style={{
                     border: '1px solid #d4af37',
-                    color: '#8a6820',
-                    background: 'transparent',
-                  }}
-                  onMouseEnter={(e) => {
-                    (e.currentTarget as HTMLElement).style.background = '#d4af37';
-                    (e.currentTarget as HTMLElement).style.color = 'white';
-                  }}
-                  onMouseLeave={(e) => {
-                    (e.currentTarget as HTMLElement).style.background = 'transparent';
-                    (e.currentTarget as HTMLElement).style.color = '#8a6820';
+                    color: 'white',
+                    background: '#d4af37',
                   }}
                 >
                   <MapPin size={14} />

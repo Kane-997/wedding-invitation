@@ -45,34 +45,24 @@ export default function RSVP() {
   return (
     <section
       id="rsvp"
-      className="py-24 px-6"
+      className="py-12 px-4"
       style={{ background: 'linear-gradient(180deg, #fdf6e9 0%, #fffef9 100%)' }}
     >
-      <div className="max-w-2xl mx-auto">
-        <div className="text-center mb-12">
+      <div className="max-w-lg mx-auto">
+        <div className="text-center mb-8">
           <p className="font-sans text-xs tracking-[0.4em] uppercase mb-4" style={{ color: '#b8962e' }}>
             Phản hồi từ khách mời
           </p>
-          <h2
-            className="font-serif"
-            style={{ fontSize: 'clamp(2.2rem, 5vw, 3.5rem)', fontWeight: 300, color: '#5c3d1a' }}
-          >
+          <h2 className="font-serif text-3xl mb-3" style={{ fontWeight: 300, color: '#5c3d1a' }}>
             Xác Nhận Tham Dự
           </h2>
-          <div className="gold-divider mt-4 mb-6" />
-          <p className="font-sans text-sm" style={{ color: '#7a5c2e', lineHeight: 1.8 }}>
-            Vui lòng xác nhận trước ngày <strong>06/07/2026</strong> để chúng tôi chuẩn bị tốt nhất.
+          <div className="gold-divider mb-4" />
+          <p className="font-sans text-sm" style={{ color: '#7a5c2e', lineHeight: 1.6 }}>
+            Vui lòng xác nhận trước ngày <strong>06/07/2026</strong>
           </p>
         </div>
 
-        <div
-          className="rounded-sm p-6 sm:p-8 md:p-10"
-          style={{
-            background: 'rgba(255,255,255,0.9)',
-            border: '1px solid #e8d5a3',
-            boxShadow: '0 12px 48px rgba(139,100,32,0.12)',
-          }}
-        >
+        <div className="rounded-sm p-4" style={{ background: 'rgba(255,255,255,0.9)', border: '1px solid #e8d5a3', boxShadow: '0 12px 48px rgba(139,100,32,0.12)' }}>
           {submitted ? (
             <div className="text-center py-8">
               <CheckCircle size={56} className="mx-auto mb-4" style={{ color: '#d4af37' }} />
@@ -85,7 +75,7 @@ export default function RSVP() {
               </p>
             </div>
           ) : (
-            <form onSubmit={handleSubmit} className="space-y-5">
+            <form onSubmit={handleSubmit} className="space-y-4">
               <div>
                 <label className="font-sans text-xs tracking-widest uppercase block mb-2" style={{ color: '#b8962e' }}>
                   Họ và tên *

@@ -56,23 +56,16 @@ export default function Wishes() {
     });
 
   return (
-    <section
-      id="wishes"
-      className="py-24 px-6"
-      style={{ background: 'linear-gradient(180deg, #fffef9 0%, #fdf6e9 100%)' }}
-    >
-      <div className="max-w-4xl mx-auto">
-        <div className="text-center mb-12">
+    <section id="wishes" className="py-12 px-4" style={{ background: 'linear-gradient(180deg, #fffef9 0%, #fdf6e9 100%)' }}>
+      <div className="max-w-lg mx-auto">
+        <div className="text-center mb-8">
           <p className="font-sans text-xs tracking-[0.4em] uppercase mb-4" style={{ color: '#b8962e' }}>
             Lời chúc từ bạn bè
           </p>
-          <h2
-            className="font-serif"
-            style={{ fontSize: 'clamp(2.2rem, 5vw, 3.5rem)', fontWeight: 300, color: '#5c3d1a' }}
-          >
-            Lời Chúc Từ Khách Mời
+          <h2 className="font-serif text-3xl mb-3" style={{ fontWeight: 300, color: '#5c3d1a' }}>
+            Lời Chúc
           </h2>
-          <div className="gold-divider mt-4" />
+          <div className="gold-divider" />
         </div>
 
         {loading ? (
@@ -89,24 +82,14 @@ export default function Wishes() {
             </p>
           </div>
         ) : (
-          <div className="grid md:grid-cols-2 gap-4">
+          <div className="space-y-3">
             {wishes.map((wish) => (
               <div
                 key={wish.id}
-                className="rounded-sm p-5 flex gap-4 items-start"
+                className="rounded-sm p-4 flex gap-3 items-start"
                 style={{
                   background: 'rgba(255,255,255,0.8)',
                   border: '1px solid #e8d5a3',
-                  transition: 'all 0.3s ease-out',
-                }}
-                onMouseEnter={(e) => {
-                  (e.currentTarget as HTMLElement).style.boxShadow =
-                    '0 8px 24px rgba(139,100,32,0.12)';
-                  (e.currentTarget as HTMLElement).style.transform = 'translateY(-2px)';
-                }}
-                onMouseLeave={(e) => {
-                  (e.currentTarget as HTMLElement).style.boxShadow = 'none';
-                  (e.currentTarget as HTMLElement).style.transform = 'translateY(0)';
                 }}
               >
                 <div
@@ -116,15 +99,15 @@ export default function Wishes() {
                   <Heart fill="white" stroke="white" size={16} />
                 </div>
                 <div className="flex-1 min-w-0">
-                  <div className="flex items-center justify-between gap-2 flex-wrap mb-1">
-                    <span className="font-serif text-base font-medium" style={{ color: '#5c3d1a' }}>
+                  <div className="flex items-center justify-between gap-2 mb-1 flex-wrap">
+                    <span className="font-serif text-sm" style={{ color: '#5c3d1a' }}>
                       {wish.name}
                     </span>
                     <span className="font-sans text-xs" style={{ color: '#b8962e' }}>
                       {formatDate(wish.created_at)}
                     </span>
                   </div>
-                  <p className="font-sans text-sm leading-relaxed" style={{ color: '#7a5c2e' }}>
+                  <p className="font-sans text-xs leading-relaxed" style={{ color: '#7a5c2e' }}>
                     {wish.message}
                   </p>
                 </div>

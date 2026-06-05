@@ -51,115 +51,84 @@ export default function Guestbook() {
     new Date(d).toLocaleDateString('vi-VN', { day: '2-digit', month: '2-digit', year: 'numeric' });
 
   return (
-    <section
-      id="guestbook"
-      className="py-24 px-6"
-      style={{ background: 'linear-gradient(180deg, #fffef9 0%, #fdf6e9 100%)' }}
-    >
-      <div className="max-w-3xl mx-auto">
-        <div className="text-center mb-12">
+    <section id="guestbook" className="py-12 px-4" style={{ background: 'linear-gradient(180deg, #fffef9 0%, #fdf6e9 100%)' }}>
+      <div className="max-w-lg mx-auto">
+        <div className="text-center mb-8">
           <p className="font-sans text-xs tracking-[0.4em] uppercase mb-4" style={{ color: '#b8962e' }}>
             Để lại lời chúc
           </p>
-          <h2
-            className="font-serif"
-            style={{ fontSize: 'clamp(2.2rem, 5vw, 3.5rem)', fontWeight: 300, color: '#5c3d1a' }}
-          >
+          <h2 className="font-serif text-3xl mb-3" style={{ fontWeight: 300, color: '#5c3d1a' }}>
             Sổ lưu bút
           </h2>
-          <div className="gold-divider mt-4" />
+          <div className="gold-divider" />
         </div>
 
-        {/* Form */}
-        <div
-          className="rounded-sm p-6 sm:p-8 mb-10"
-          style={{
-            background: 'rgba(255,255,255,0.9)',
-            border: '1px solid #e8d5a3',
-            boxShadow: '0 8px 40px rgba(139,100,32,0.1)',
-          }}
-        >
-          <form onSubmit={handleSubmit} className="space-y-4">
+        <div className="rounded-sm p-4 mb-8" style={{ background: 'rgba(255,255,255,0.9)', border: '1px solid #e8d5a3', boxShadow: '0 8px 40px rgba(139,100,32,0.1)' }}>
+          <form onSubmit={handleSubmit} className="space-y-3">
             <div>
-              <label className="font-sans text-xs tracking-widest uppercase block mb-2" style={{ color: '#b8962e' }}>
-                Tên của bạn
+              <label className="font-sans text-xs tracking-widest uppercase block mb-1" style={{ color: '#b8962e' }}>
+                Tên
               </label>
               <input
                 type="text"
                 value={form.name}
                 onChange={(e) => setForm({ ...form, name: e.target.value })}
-                placeholder="Nguyễn Văn An"
-                className="w-full font-sans text-sm px-4 py-3 rounded-sm outline-none transition-all duration-300"
+                placeholder="Tên của bạn"
+                className="w-full font-sans text-sm px-3 py-2 rounded-sm outline-none"
                 style={inputStyle}
-                onFocus={(e) => (e.target.style.borderColor = '#d4af37')}
-                onBlur={(e) => (e.target.style.borderColor = '#e8d5a3')}
               />
             </div>
             <div>
-              <label className="font-sans text-xs tracking-widest uppercase block mb-2" style={{ color: '#b8962e' }}>
+              <label className="font-sans text-xs tracking-widest uppercase block mb-1" style={{ color: '#b8962e' }}>
                 Lời chúc
               </label>
               <textarea
                 value={form.message}
                 onChange={(e) => setForm({ ...form, message: e.target.value })}
-                placeholder="Chúc mừng hạnh phúc trăm năm..."
-                rows={3}
-                className="w-full font-sans text-sm px-4 py-3 rounded-sm outline-none transition-all duration-300"
+                placeholder="Gửi lời chúc..."
+                rows={2}
+                className="w-full font-sans text-sm px-3 py-2 rounded-sm outline-none"
                 style={{ ...inputStyle, resize: 'none' }}
-                onFocus={(e) => (e.target.style.borderColor = '#d4af37')}
-                onBlur={(e) => (e.target.style.borderColor = '#e8d5a3')}
               />
             </div>
-            {error && <p className="font-sans text-sm text-red-500">{error}</p>}
+            {error && <p className="font-sans text-xs text-red-500">{error}</p>}
             <button
               type="submit"
               disabled={loading}
-              className="flex items-center gap-2 font-sans text-sm tracking-[0.2em] uppercase px-8 py-3 rounded-sm transition-all duration-300"
+              className="flex items-center justify-center gap-2 w-full font-sans text-sm tracking-[0.2em] uppercase py-2 rounded-sm"
               style={{
                 background: loading ? '#e8d5a3' : 'linear-gradient(135deg, #c9a84c, #d4af37)',
                 color: 'white',
                 cursor: loading ? 'not-allowed' : 'pointer',
-                boxShadow: loading ? 'none' : '0 4px 16px rgba(212,175,55,0.4)',
               }}
             >
-              <Send size={14} />
-              {loading ? 'Đang gửi...' : 'Gửi lời chúc'}
+              <Send size={12} />
+              {loading ? 'Đang gửi...' : 'Gửi'}
             </button>
           </form>
         </div>
 
-        {/* Messages list */}
-        <div className="space-y-4">
+        <div className="space-y-3">
           {messages.length === 0 && (
-            <p className="text-center font-sans text-sm" style={{ color: '#b8962e' }}>
+            <p className="text-center font-sans text-xs" style={{ color: '#b8962e' }}>
               Hãy là người đầu tiên gửi lời chúc!
             </p>
           )}
           {messages.map((msg) => (
-            <div
-              key={msg.id}
-              className="rounded-sm p-5 flex gap-4 items-start"
-              style={{
-                background: 'rgba(255,255,255,0.8)',
-                border: '1px solid #e8d5a3',
-              }}
-            >
-              <div
-                className="w-10 h-10 rounded-full flex items-center justify-center flex-shrink-0"
-                style={{ background: 'linear-gradient(135deg, #d4af37, #f5e6c8)' }}
-              >
-                <Heart fill="white" stroke="white" size={16} />
+            <div key={msg.id} className="rounded-sm p-3 flex gap-3 items-start" style={{ background: 'rgba(255,255,255,0.8)', border: '1px solid #e8d5a3' }}>
+              <div className="w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0" style={{ background: 'linear-gradient(135deg, #d4af37, #f5e6c8)' }}>
+                <Heart fill="white" stroke="white" size={12} />
               </div>
               <div className="flex-1 min-w-0">
-                <div className="flex items-center justify-between gap-2 flex-wrap mb-1">
-                  <span className="font-serif text-base font-medium" style={{ color: '#5c3d1a' }}>
+                <div className="flex items-center justify-between gap-1 mb-1 flex-wrap">
+                  <span className="font-serif text-sm font-medium" style={{ color: '#5c3d1a' }}>
                     {msg.name}
                   </span>
                   <span className="font-sans text-xs" style={{ color: '#b8962e' }}>
                     {formatDate(msg.created_at)}
                   </span>
                 </div>
-                <p className="font-sans text-sm leading-relaxed" style={{ color: '#7a5c2e' }}>
+                <p className="font-sans text-xs leading-relaxed" style={{ color: '#7a5c2e' }}>
                   {msg.message}
                 </p>
               </div>

@@ -84,98 +84,45 @@ export default function Gallery() {
   const prev = () => setLightbox((p) => (p !== null ? (p - 1 + photos.length) % photos.length : null));
   const next = () => setLightbox((p) => (p !== null ? (p + 1) % photos.length : null));
 
-  const renderGalleryRow = (photoIndices: number[], layoutType: string) => {
-    if (layoutType === 'row') {
-      return (
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
-          {photoIndices.map((idx) => (
-            <div
-              key={idx}
-              className="overflow-hidden cursor-pointer rounded-sm group"
-              onClick={() => setLightbox(idx)}
-            >
-              <img
-                src={photos[idx].thumb}
-                alt={`Wedding photo ${idx + 1}`}
-                className="w-full h-64 md:h-72 object-cover transition-transform duration-700 group-hover:scale-105"
-              />
-            </div>
-          ))}
-        </div>
-      );
-    } else if (layoutType === 'varied') {
-      return (
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
-          <div className="md:col-span-2 overflow-hidden cursor-pointer rounded-sm group" onClick={() => setLightbox(photoIndices[0])}>
-            <img src={photos[photoIndices[0]].thumb} alt="Wedding photo" className="w-full h-72 md:h-80 object-cover transition-transform duration-700 group-hover:scale-105" />
+  const renderGalleryRow = (photoIndices: number[]) => {
+    return (
+      <div className="space-y-3">
+        {photoIndices.map((idx) => (
+          <div key={idx} className="overflow-hidden cursor-pointer rounded-sm" onClick={() => setLightbox(idx)}>
+            <img src={photos[idx].thumb} alt={`Wedding photo ${idx + 1}`} className="w-full h-48 object-cover" loading="lazy" />
           </div>
-          <div className="grid grid-cols-2 gap-4 md:gap-6 md:grid-cols-1">
-            {[photoIndices[1], photoIndices[2]].map((idx) => (
-              <div key={idx} className="overflow-hidden cursor-pointer rounded-sm group" onClick={() => setLightbox(idx)}>
-                <img src={photos[idx].thumb} alt="Wedding photo" className="w-full h-36 md:h-36 object-cover transition-transform duration-700 group-hover:scale-105" />
-              </div>
-            ))}
-          </div>
-        </div>
-      );
-    } else if (layoutType === 'mixed') {
-      return (
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-4 md:gap-6 auto-rows-64 md:auto-rows-72">
-          {photoIndices.map((idx, pos) => {
-            let spanClass = '';
-            if (pos === 0) spanClass = 'md:col-span-2 md:row-span-2';
-            else if (pos === 3) spanClass = 'md:col-span-2';
-            return (
-              <div
-                key={idx}
-                className={`overflow-hidden cursor-pointer rounded-sm group ${spanClass}`}
-                onClick={() => setLightbox(idx)}
-              >
-                <img src={photos[idx].thumb} alt="Wedding photo" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
-              </div>
-            );
-          })}
-        </div>
-      );
-    }
+        ))}
+      </div>
+    );
   };
 
   return (
     <section
       id="gallery"
-      className="py-16 md:py-28 px-6"
+      className="py-12 px-4"
       style={{ background: 'linear-gradient(180deg, #fdf6e9 0%, #fffef9 100%)' }}
     >
-      <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-16 md:mb-20">
+      <div className="max-w-lg mx-auto">
+        <div className="text-center mb-12">
           <p className="font-sans text-xs tracking-[0.4em] uppercase mb-4" style={{ color: '#b8962e' }}>
             Khoảnh khắc của chúng tôi
           </p>
-          <h2
-            className="font-serif"
-            style={{ fontSize: 'clamp(2.2rem, 5vw, 3.5rem)', fontWeight: 300, color: '#5c3d1a' }}
-          >
+          <h2 className="font-serif text-3xl mb-3" style={{ fontWeight: 300, color: '#5c3d1a' }}>
             Bộ ảnh cưới
           </h2>
-          <div className="gold-divider mt-4" />
+          <div className="gold-divider" />
         </div>
 
-        <div className="space-y-16 md:space-y-20">
+        <div className="space-y-12">
           {sections.map((section, idx) => (
             <div key={idx}>
-              {section.type === 'gallery' && renderGalleryRow(section.photos!, section.layout!)}
+              {section.type === 'gallery' && renderGalleryRow(section.photos!)}
               {section.type === 'text' && (
-                <div className="py-12 md:py-16 flex flex-col items-center justify-center text-center max-w-3xl mx-auto">
-                  <h3
-                    className="font-serif text-4xl md:text-5xl mb-6"
-                    style={{ fontWeight: 300, color: '#5c3d1a', lineHeight: 1.3 }}
-                  >
+                <div className="py-8 flex flex-col items-center justify-center text-center">
+                  <h3 className="font-serif text-2xl mb-4" style={{ fontWeight: 300, color: '#5c3d1a', lineHeight: 1.3 }}>
                     {section.title}
                   </h3>
-                  <p
-                    className="font-sans text-base md:text-lg leading-relaxed"
-                    style={{ color: '#7a5c2e', lineHeight: 1.8 }}
-                  >
+                  <p className="font-sans text-sm leading-relaxed" style={{ color: '#7a5c2e', lineHeight: 1.8 }}>
                     {section.text}
                   </p>
                 </div>
@@ -185,39 +132,28 @@ export default function Gallery() {
         </div>
       </div>
 
-      {/* Lightbox */}
       {lightbox !== null && (
         <div
           className="fixed inset-0 z-50 flex items-center justify-center"
           style={{ background: 'rgba(0,0,0,0.92)' }}
           onClick={() => setLightbox(null)}
         >
-          <button
-            className="absolute top-6 right-6 text-white hover:text-yellow-300 transition-colors"
-            onClick={() => setLightbox(null)}
-          >
+          <button className="absolute top-4 right-4 text-white" onClick={() => setLightbox(null)}>
             <X size={32} />
           </button>
-          <button
-            className="absolute left-4 sm:left-8 text-white hover:text-yellow-300 transition-colors"
-            onClick={(e) => { e.stopPropagation(); prev(); }}
-          >
-            <ChevronLeft size={40} />
+          <button className="absolute left-2 text-white" onClick={(e) => { e.stopPropagation(); prev(); }}>
+            <ChevronLeft size={32} />
           </button>
           <img
             src={photos[lightbox].src}
             alt="Wedding photo"
-            className="max-h-[85vh] max-w-[90vw] object-contain rounded-sm"
+            className="max-h-[85vh] max-w-[95vw] object-contain rounded-sm"
             onClick={(e) => e.stopPropagation()}
-            style={{ boxShadow: '0 0 60px rgba(212,175,55,0.3)' }}
           />
-          <button
-            className="absolute right-4 sm:right-8 text-white hover:text-yellow-300 transition-colors"
-            onClick={(e) => { e.stopPropagation(); next(); }}
-          >
-            <ChevronRight size={40} />
+          <button className="absolute right-2 text-white" onClick={(e) => { e.stopPropagation(); next(); }}>
+            <ChevronRight size={32} />
           </button>
-          <div className="absolute bottom-6 font-sans text-sm text-white opacity-60">
+          <div className="absolute bottom-4 font-sans text-sm text-white opacity-60">
             {lightbox + 1} / {photos.length}
           </div>
         </div>
