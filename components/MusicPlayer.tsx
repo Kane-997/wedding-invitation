@@ -8,7 +8,7 @@ export default function MusicPlayer() {
   const [playing, setPlaying] = useState(false);
   const [started, setStarted] = useState(false);
 
-  const MUSIC_URL = 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3';
+  const MUSIC_URL = 'https://soundcloud.com/nltlinh148/mot-doi-14-casper-bon-nghiem-feat-buitruonglinh?si=f57da492c3bd4d83bffb568c45921aeb&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing';
 
   const toggle = () => {
     const audio = audioRef.current;
