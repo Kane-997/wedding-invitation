@@ -9,7 +9,7 @@ const initialForm: RSVPInsert = {
   email: '',
   attending: true,
   guests: 0,
-  message: '', // Used as wish message
+  message: '',
 };
 
 export default function RSVP() {
@@ -21,8 +21,8 @@ export default function RSVP() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setError('');
-    if (!form.name.trim() || !form.email.trim()) {
-      setError('Vui lòng điền đầy đủ họ tên và email.');
+    if (!form.name.trim()) {
+      setError('Vui lòng điền họ tên.');
       return;
     }
     setLoading(true);
@@ -95,22 +95,6 @@ export default function RSVP() {
                   value={form.name}
                   onChange={(e) => setForm({ ...form, name: e.target.value })}
                   placeholder="Nguyễn Văn An"
-                  className={inputClass}
-                  style={inputStyle}
-                  onFocus={(e) => (e.target.style.borderColor = '#d4af37')}
-                  onBlur={(e) => (e.target.style.borderColor = '#e8d5a3')}
-                />
-              </div>
-
-              <div>
-                <label className="font-sans text-xs tracking-widest uppercase block mb-2" style={{ color: '#b8962e' }}>
-                  Email *
-                </label>
-                <input
-                  type="email"
-                  value={form.email}
-                  onChange={(e) => setForm({ ...form, email: e.target.value })}
-                  placeholder="email@example.com"
                   className={inputClass}
                   style={inputStyle}
                   onFocus={(e) => (e.target.style.borderColor = '#d4af37')}
