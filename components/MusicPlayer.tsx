@@ -8,7 +8,7 @@ export default function MusicPlayer() {
   const [playing, setPlaying] = useState(false);
   const [started, setStarted] = useState(false);
 
-  const MUSIC_URL = 'https://mp3.zing.vn/download/audio/single/Mot-Doi-14-Casper-Bon-Nghiem/ZW7U0WIC.128.mp3';
+  const MUSIC_URL = 'https://cdn.pixabay.com/download/audio/2022/02/15/audio_d3c4eccd51.mp3';
 
   const toggle = () => {
     const audio = audioRef.current;
