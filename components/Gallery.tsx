@@ -53,7 +53,7 @@ const photos = [
 const sections: Array<{ type: string; photos?: number[]; layout?: string; title?: string; text?: string }> = [
   {
     type: 'gallery',
-    photos: [0, 1, 2],
+    photos: [0, 1],
     layout: 'row',
   },
   {
@@ -63,7 +63,7 @@ const sections: Array<{ type: string; photos?: number[]; layout?: string; title?
   },
   {
     type: 'gallery',
-    photos: [3, 4, 5],
+    photos: [2, 3, 4, 5],
     layout: 'varied',
   },
   {
