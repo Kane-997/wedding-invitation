@@ -1,8 +1,8 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { supabase, RSVPInsert } from '@/lib/supabase';
-import { Heart } from 'lucide-react';
+import { supabase } from '@/lib/supabase';
+import { Heart, ChevronLeft, ChevronRight } from 'lucide-react';
 
 type Wish = {
   id: string;
@@ -14,6 +14,7 @@ type Wish = {
 export default function Wishes() {
   const [wishes, setWishes] = useState<Wish[]>([]);
   const [loading, setLoading] = useState(true);
+  const [current, setCurrent] = useState(0);
 
   useEffect(() => {
     const fetchWishes = async () => {
@@ -55,6 +56,9 @@ export default function Wishes() {
       year: 'numeric',
     });
 
+  const next = () => setCurrent((current + 1) % (wishes.length || 1));
+  const prev = () => setCurrent((current - 1 + (wishes.length || 1)) % (wishes.length || 1));
+
   return (
     <section id="wishes" className="py-12 px-4" style={{ background: 'linear-gradient(180deg, #fffef9 0%, #fdf6e9 100%)' }}>
       <div className="max-w-lg mx-auto">
@@ -82,37 +86,73 @@ export default function Wishes() {
             </p>
           </div>
         ) : (
-          <div className="space-y-3">
-            {wishes.map((wish) => (
-              <div
-                key={wish.id}
-                className="rounded-sm p-4 flex gap-3 items-start"
-                style={{
-                  background: 'rgba(255,255,255,0.8)',
-                  border: '1px solid #e8d5a3',
-                }}
-              >
+          <div>
+            <div
+              className="rounded-sm p-6 text-center transition-all duration-500 relative min-h-56 flex flex-col items-center justify-center"
+              style={{
+                background: 'rgba(255,255,255,0.8)',
+                border: '1px solid #e8d5a3',
+              }}
+            >
+              <div className="mb-4">
                 <div
-                  className="w-10 h-10 rounded-full flex items-center justify-center flex-shrink-0"
+                  className="w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4"
                   style={{ background: 'linear-gradient(135deg, #d4af37, #f5e6c8)' }}
                 >
-                  <Heart fill="white" stroke="white" size={16} />
+                  <Heart fill="white" stroke="white" size={20} />
                 </div>
-                <div className="flex-1 min-w-0">
-                  <div className="flex items-center justify-between gap-2 mb-1 flex-wrap">
-                    <span className="font-serif text-sm" style={{ color: '#5c3d1a' }}>
-                      {wish.name}
-                    </span>
-                    <span className="font-sans text-xs" style={{ color: '#b8962e' }}>
-                      {formatDate(wish.created_at)}
-                    </span>
-                  </div>
-                  <p className="font-sans text-xs leading-relaxed" style={{ color: '#7a5c2e' }}>
-                    {wish.message}
-                  </p>
-                </div>
+                <h3 className="font-serif text-lg" style={{ color: '#5c3d1a' }}>
+                  {wishes[current]?.name}
+                </h3>
+                <p className="font-sans text-xs mt-1" style={{ color: '#b8962e' }}>
+                  {formatDate(wishes[current]?.created_at)}
+                </p>
               </div>
-            ))}
+
+              <p className="font-sans text-sm leading-relaxed px-4 italic" style={{ color: '#7a5c2e' }}>
+                "{wishes[current]?.message}"
+              </p>
+
+              <div className="flex gap-3 mt-6">
+                <button
+                  onClick={prev}
+                  className="p-2 rounded-full transition-all"
+                  style={{
+                    background: 'rgba(212,175,55,0.1)',
+                    border: '1px solid #e8d5a3',
+                    color: '#d4af37',
+                  }}
+                >
+                  <ChevronLeft size={18} />
+                </button>
+                <button
+                  onClick={next}
+                  className="p-2 rounded-full transition-all"
+                  style={{
+                    background: 'rgba(212,175,55,0.1)',
+                    border: '1px solid #e8d5a3',
+                    color: '#d4af37',
+                  }}
+                >
+                  <ChevronRight size={18} />
+                </button>
+              </div>
+            </div>
+
+            <div className="flex justify-center gap-2 mt-4">
+              {wishes.map((_, idx) => (
+                <button
+                  key={idx}
+                  onClick={() => setCurrent(idx)}
+                  className="transition-all rounded-full"
+                  style={{
+                    width: current === idx ? '24px' : '8px',
+                    height: '8px',
+                    background: current === idx ? '#d4af37' : '#e8d5a3',
+                  }}
+                />
+              ))}
+            </div>
           </div>
         )}
       </div>

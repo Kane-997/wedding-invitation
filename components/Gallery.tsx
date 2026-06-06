@@ -84,12 +84,81 @@ export default function Gallery() {
   const prev = () => setLightbox((p) => (p !== null ? (p - 1 + photos.length) % photos.length : null));
   const next = () => setLightbox((p) => (p !== null ? (p + 1) % photos.length : null));
 
-  const renderGalleryRow = (photoIndices: number[]) => {
+  const renderGalleryRow = (photoIndices: number[], layout?: string) => {
+    if (layout === 'varied') {
+      return (
+        <div className="grid grid-cols-2 gap-3">
+          <div className="col-span-1 row-span-2">
+            <div
+              key={photoIndices[0]}
+              className="overflow-hidden cursor-pointer rounded-sm h-full"
+              onClick={() => setLightbox(photoIndices[0])}
+            >
+              <img
+                src={photos[photoIndices[0]].thumb}
+                alt={`Wedding photo ${photoIndices[0] + 1}`}
+                className="w-full h-full object-cover object-top"
+                loading="lazy"
+              />
+            </div>
+          </div>
+          <div className="space-y-3">
+            {photoIndices.slice(1, 3).map((idx) => (
+              <div
+                key={idx}
+                className="overflow-hidden cursor-pointer rounded-sm h-24"
+                onClick={() => setLightbox(idx)}
+              >
+                <img
+                  src={photos[idx].thumb}
+                  alt={`Wedding photo ${idx + 1}`}
+                  className="w-full h-full object-cover object-top"
+                  loading="lazy"
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+      );
+    }
+
+    if (layout === 'mixed') {
+      return (
+        <div className="grid grid-cols-3 gap-3">
+          {photoIndices.map((idx, i) => (
+            <div
+              key={idx}
+              className={`overflow-hidden cursor-pointer rounded-sm ${
+                i === 2 ? 'col-span-2 h-40' : 'h-32'
+              }`}
+              onClick={() => setLightbox(idx)}
+            >
+              <img
+                src={photos[idx].thumb}
+                alt={`Wedding photo ${idx + 1}`}
+                className="w-full h-full object-cover object-top"
+                loading="lazy"
+              />
+            </div>
+          ))}
+        </div>
+      );
+    }
+
     return (
-      <div className="space-y-3">
+      <div className="grid grid-cols-2 gap-3">
         {photoIndices.map((idx) => (
-          <div key={idx} className="overflow-hidden cursor-pointer rounded-sm" onClick={() => setLightbox(idx)}>
-            <img src={photos[idx].thumb} alt={`Wedding photo ${idx + 1}`} className="w-full h-48 object-cover object-top" loading="lazy" />
+          <div
+            key={idx}
+            className="overflow-hidden cursor-pointer rounded-sm h-40"
+            onClick={() => setLightbox(idx)}
+          >
+            <img
+              src={photos[idx].thumb}
+              alt={`Wedding photo ${idx + 1}`}
+              className="w-full h-full object-cover object-top"
+              loading="lazy"
+            />
           </div>
         ))}
       </div>
@@ -116,7 +185,7 @@ export default function Gallery() {
         <div className="space-y-12">
           {sections.map((section, idx) => (
             <div key={idx}>
-              {section.type === 'gallery' && renderGalleryRow(section.photos!)}
+              {section.type === 'gallery' && renderGalleryRow(section.photos!, section.layout)}
               {section.type === 'text' && (
                 <div className="py-8 flex flex-col items-center justify-center text-center">
                   <h3 className="font-serif text-2xl mb-4" style={{ fontWeight: 300, color: '#5c3d1a', lineHeight: 1.3 }}>
