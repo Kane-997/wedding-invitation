@@ -36,7 +36,7 @@ export default function Hero() {
         </div>
 
         <p className="font-sans text-sm mb-2" style={{ color: 'rgba(255,255,255,0.9)' }}>
-          19.09.2026
+          19.07.2026
         </p>
         <p className="font-sans text-xs uppercase tracking-widest" style={{ color: 'rgba(255,255,255,0.7)' }}>
           TP. Quy Nhơn
