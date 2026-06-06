@@ -61,8 +61,8 @@ const photos = [
     thumb: 'https://sf-static.upanhlaylink.com/img/image_202606064985f4ccf7634a1bb17b75312d91be11.jpg?auto=compress&cs=tinysrgb&w=400',
   },
   {
-    src: 'https://sf-static.upanhlaylink.com/img/image_202606067a046a662c0d97553a1bb80a6e906b40.jpg?auto=compress&cs=tinysrgb&w=800',
-    thumb: 'https://sf-static.upanhlaylink.com/img/image_202606067a046a662c0d97553a1bb80a6e906b40.jpg?auto=compress&cs=tinysrgb&w=400',
+    src: 'https://sf-static.upanhlaylink.com/img/image_20260606dcf299bc7ff68f2db3d5f643a36d711e.jpg?auto=compress&cs=tinysrgb&w=800',
+    thumb: 'https://sf-static.upanhlaylink.com/img/image_20260606dcf299bc7ff68f2db3d5f643a36d711e.jpg?auto=compress&cs=tinysrgb&w=400',
   },
   {
     src: 'https://sf-static.upanhlaylink.com/img/image_202606060c413f10a6d8b0648a2554de2fe2a15c.jpg?auto=compress&cs=tinysrgb&w=800',
