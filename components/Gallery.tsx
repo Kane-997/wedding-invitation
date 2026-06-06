@@ -89,7 +89,7 @@ export default function Gallery() {
       <div className="space-y-3">
         {photoIndices.map((idx) => (
           <div key={idx} className="overflow-hidden cursor-pointer rounded-sm" onClick={() => setLightbox(idx)}>
-            <img src={photos[idx].thumb} alt={`Wedding photo ${idx + 1}`} className="w-full h-48 object-cover" loading="lazy" />
+            <img src={photos[idx].thumb} alt={`Wedding photo ${idx + 1}`} className="w-full h-48 object-cover object-top" loading="lazy" />
           </div>
         ))}
       </div>
