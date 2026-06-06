@@ -73,7 +73,7 @@ const sections: Array<{ type: string; photos?: number[]; layout?: string; title?
   },
   {
     type: 'gallery',
-    photos: [6, 7, 8, 9, 10],
+    photos: [2, 3, 6, 7, 8, 9, 10],
     layout: 'mixed',
   },
 ];
