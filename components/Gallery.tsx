@@ -10,11 +10,11 @@ const photos = [
   },
   {
     src: 'https://sf-static.upanhlaylink.com/img/image_20260604696900d55b961dcabe358e29fce6f1d8.jpg?auto=compress&cs=tinysrgb&w=800',
-    thumb: 'https://sf-static.upanhlaylink.com/img/image_20260604696900d55b961dcabe358e29fce6f1d8.jpg?auto=compress&cs=tinysrgb&w=400',
+    thumb: 'https://sf-static.upanhlaylink.com/img/image_20260604696900d55b961dcabe358e29fce6f1d8.jpg?auto=compress&cs=tinysrgb&w=800',
   },
   {
     src: 'https://sf-static.upanhlaylink.com/img/image_20260604591faa1b94f3fff6a0741eb4a3dc2f6d.jpg?auto=compress&cs=tinysrgb&w=800',
-    thumb: 'https://sf-static.upanhlaylink.com/img/image_20260604591faa1b94f3fff6a0741eb4a3dc2f6d.jpg?auto=compress&cs=tinysrgb&w=400',
+    thumb: 'https://sf-static.upanhlaylink.com/img/image_20260604591faa1b94f3fff6a0741eb4a3dc2f6d.jpg?auto=compress&cs=tinysrgb&w=800',
   },
   {
     src: 'https://sf-static.upanhlaylink.com/img/image_202606041519dbdec222ef0cdba96a64418cf56d.jpg?auto=compress&cs=tinysrgb&w=800',
