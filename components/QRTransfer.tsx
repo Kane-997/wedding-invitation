@@ -13,10 +13,10 @@ const accounts = [
     qr: 'https://img.vietqr.io/image/VCB-1234567890-compact2.png?amount=0&addInfo=Mung%20cuoi%20Minh%20Anh%20Quoc%20Huy&accountName=NGUYEN%20MINH%20ANH',
   },
   {
-    bank: 'MB Bank',
+    bank: 'Vietcom Bank',
     logo: '🏛️',
-    accountNumber: '0987654321',
-    accountName: 'TRAN QUOC HUY',
+    accountNumber: '1028530394',
+    accountName: 'MAI THI YEN NHI',
     branch: 'Chi nhánh TP.HCM',
     qr: 'https://img.vietqr.io/image/MB-0987654321-compact2.png?amount=0&addInfo=Mung%20cuoi%20Minh%20Anh%20Quoc%20Huy&accountName=TRAN%20QUOC%20HUY',
   },
