@@ -6,15 +6,15 @@ import { X, ChevronLeft, ChevronRight } from 'lucide-react';
 const photos = [
   {
     src: 'https://sf-static.upanhlaylink.com/img/image_20260604b4b98cb0a20ce5429b15757850e5b643.jpg?auto=compress&cs=tinysrgb&w=800',
-    thumb: 'https://sf-static.upanhlaylink.com/img/image_20260604b4b98cb0a20ce5429b15757850e5b643.jpg?auto=compress&cs=tinysrgb&w=800',
+    thumb: 'https://sf-static.upanhlaylink.com/img/image_20260604b4b98cb0a20ce5429b15757850e5b643.jpg?auto=compress&cs=tinysrgb&w=400',
   },
   {
     src: 'https://sf-static.upanhlaylink.com/img/image_20260604696900d55b961dcabe358e29fce6f1d8.jpg?auto=compress&cs=tinysrgb&w=800',
-    thumb: 'https://sf-static.upanhlaylink.com/img/image_20260604696900d55b961dcabe358e29fce6f1d8.jpg?auto=compress&cs=tinysrgb&w=800',
+    thumb: 'https://sf-static.upanhlaylink.com/img/image_20260604696900d55b961dcabe358e29fce6f1d8.jpg?auto=compress&cs=tinysrgb&w=400',
   },
   {
     src: 'https://sf-static.upanhlaylink.com/img/image_20260604591faa1b94f3fff6a0741eb4a3dc2f6d.jpg?auto=compress&cs=tinysrgb&w=800',
-    thumb: 'https://sf-static.upanhlaylink.com/img/image_20260604591faa1b94f3fff6a0741eb4a3dc2f6d.jpg?auto=compress&cs=tinysrgb&w=800',
+    thumb: 'https://sf-static.upanhlaylink.com/img/image_20260604591faa1b94f3fff6a0741eb4a3dc2f6d.jpg?auto=compress&cs=tinysrgb&w=400',
   },
   {
     src: 'https://sf-static.upanhlaylink.com/img/image_202606041519dbdec222ef0cdba96a64418cf56d.jpg?auto=compress&cs=tinysrgb&w=800',
@@ -129,7 +129,7 @@ export default function Gallery() {
             <div
               key={idx}
               className={`overflow-hidden cursor-pointer rounded-sm ${
-                i === 2 ? 'col-span-2 h-40' : 'h-32'
+                i === 2 ? 'col-span-2 h-80' : 'h-32'
               }`}
               onClick={() => setLightbox(idx)}
             >
@@ -150,7 +150,7 @@ export default function Gallery() {
         {photoIndices.map((idx) => (
           <div
             key={idx}
-            className="overflow-hidden cursor-pointer rounded-sm h-40"
+            className="overflow-hidden cursor-pointer rounded-sm h-80"
             onClick={() => setLightbox(idx)}
           >
             <img
