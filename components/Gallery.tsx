@@ -33,12 +33,12 @@ const photos = [
     thumb: 'https://sf-static.upanhlaylink.com/img/image_202606049b884b0b41b7c2d22be677f79cfa24f4.jpg?auto=compress&cs=tinysrgb&w=400',
   },
   {
-    src: 'https://sf-static.upanhlaylink.com/img/image_20260604a27d98cdd879840f9d6718ed84080140.jpg?auto=compress&cs=tinysrgb&w=800',
-    thumb: 'https://sf-static.upanhlaylink.com/img/image_20260604a27d98cdd879840f9d6718ed84080140.jpg?auto=compress&cs=tinysrgb&w=400',
+    src: 'https://sf-static.upanhlaylink.com/img/image_2026060452e76e6e912ea393abe4a00e3273607e.jpg?auto=compress&cs=tinysrgb&w=800',
+    thumb: 'https://sf-static.upanhlaylink.com/img/image_2026060452e76e6e912ea393abe4a00e3273607e.jpg?auto=compress&cs=tinysrgb&w=400',
   },
   {
-    src: 'https://sf-static.upanhlaylink.com/img/image_202606042daef4d690d668995f93c7b5c4b5c3f6.jpg?auto=compress&cs=tinysrgb&w=800',
-    thumb: 'https://sf-static.upanhlaylink.com/img/image_202606042daef4d690d668995f93c7b5c4b5c3f6.jpg?auto=compress&cs=tinysrgb&w=400',
+    src: 'https://sf-static.upanhlaylink.com/img/image_20260606ffa3d3eaa9a27b6459999c9fc6198164.jpg?auto=compress&cs=tinysrgb&w=800',
+    thumb: 'https://sf-static.upanhlaylink.com/img/image_20260606ffa3d3eaa9a27b6459999c9fc6198164.jpg?auto=compress&cs=tinysrgb&w=400',
   },
   {
     src: 'https://sf-static.upanhlaylink.com/img/image_202606042124284c1b0c2e222a1cf58814244118.jpg?auto=compress&cs=tinysrgb&w=800',
