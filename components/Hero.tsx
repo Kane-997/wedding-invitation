@@ -26,9 +26,9 @@ export default function Hero() {
         </p>
 
         <h1 className="font-serif text-4xl md:text-5xl mb-8" style={{ fontWeight: 300, color: 'white', lineHeight: 1.3 }}>
-          Hoàng Huy
+          Nhật Hào
           <br />
-          & Nguyễn Dung
+          & Nhi Mai
         </h1>
 
         <div className="w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-8" style={{ background: 'rgba(212,175,55,0.2)', border: '2px solid rgba(212,175,55,0.5)' }}>
@@ -36,10 +36,10 @@ export default function Hero() {
         </div>
 
         <p className="font-sans text-sm mb-2" style={{ color: 'rgba(255,255,255,0.9)' }}>
-          24.12.2026
+          19.09.2026
         </p>
         <p className="font-sans text-xs uppercase tracking-widest" style={{ color: 'rgba(255,255,255,0.7)' }}>
-          TP. Hồ Chí Minh
+          TP. Quy Nhơn
         </p>
       </div>
     </section>
