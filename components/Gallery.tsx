@@ -129,7 +129,7 @@ export default function Gallery() {
             <div
               key={idx}
               className={`overflow-hidden cursor-pointer rounded-sm ${
-                i === 2 ? 'col-span-2 h-80' : 'h-80'
+                i === 2 ? 'col-span-2 h-160' : 'h-80'
               }`}
               onClick={() => setLightbox(idx)}
             >
