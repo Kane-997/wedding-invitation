@@ -21,21 +21,30 @@ export default function Invitation() {
         <div className="space-y-4">
           <div className="rounded-sm p-4" style={{ background: 'rgba(255,255,255,0.8)', border: '1px solid #e8d5a3' }}>
             <p className="font-sans text-xs uppercase tracking-wider mb-2" style={{ color: '#b8962e' }}>
-              Lễ Thành Hôn
+              Lễ Vu Quy
             </p>
             <p className="font-serif text-lg" style={{ color: '#5c3d1a' }}>
               Nhật Hào & Nhi Mai
             </p>
             <p className="font-sans text-sm mt-2" style={{ color: '#7a5c2e' }}>
               Chủ Nhật, 19 tháng 07 năm 2026<br />
-              17:30 — Trung tâm Tiệc cưới Grand Palace
+              17:30 — Trung tâm Tiệc cưới Grand Palace (Sáu Cao 2)
             </p>
           </div>
-
-          <p className="font-sans text-xs leading-relaxed" style={{ color: '#9a7a3a' }}>
-            Sự hiện diện của bạn là niềm hạnh phúc lớn lao đối với chúng tôi.<br />
-            Mong chờ được gặp gỡ bạn trong ngày trọng đại này.
-          </p>
+        </div>
+        <div className="space-y-4">
+          <div className="rounded-sm p-4" style={{ background: 'rgba(255,255,255,0.8)', border: '1px solid #e8d5a3' }}>
+            <p className="font-sans text-xs uppercase tracking-wider mb-2" style={{ color: '#b8962e' }}>
+              Lễ Báo Hỷ
+            </p>
+            <p className="font-serif text-lg" style={{ color: '#5c3d1a' }}>
+              Nhật Hào & Nhi Mai
+            </p>
+            <p className="font-sans text-sm mt-2" style={{ color: '#7a5c2e' }}>
+              Chủ Nhật, 26 tháng 07 năm 2026<br />
+              18:00 — Nhà hàng Vườn Cau Gò Vấp
+            </p>
+          </div>
         </div>
         <div className="space-y-4">
           <div className="rounded-sm p-4" style={{ background: 'rgba(255,255,255,0.8)', border: '1px solid #e8d5a3' }}>
@@ -46,27 +55,8 @@ export default function Invitation() {
               Nhật Hào & Nhi Mai
             </p>
             <p className="font-sans text-sm mt-2" style={{ color: '#7a5c2e' }}>
-              Chủ Nhật, 19 tháng 07 năm 2026<br />
-              17:30 — Trung tâm Tiệc cưới Grand Palace
-            </p>
-          </div>
-
-          <p className="font-sans text-xs leading-relaxed" style={{ color: '#9a7a3a' }}>
-            Sự hiện diện của bạn là niềm hạnh phúc lớn lao đối với chúng tôi.<br />
-            Mong chờ được gặp gỡ bạn trong ngày trọng đại này.
-          </p>
-        </div>
-        <div className="space-y-4">
-          <div className="rounded-sm p-4" style={{ background: 'rgba(255,255,255,0.8)', border: '1px solid #e8d5a3' }}>
-            <p className="font-sans text-xs uppercase tracking-wider mb-2" style={{ color: '#b8962e' }}>
-              Lễ Thành Hôn
-            </p>
-            <p className="font-serif text-lg" style={{ color: '#5c3d1a' }}>
-              Nhật Hào & Nhi Mai
-            </p>
-            <p className="font-sans text-sm mt-2" style={{ color: '#7a5c2e' }}>
-              Chủ Nhật, 19 tháng 07 năm 2026<br />
-              17:30 — Trung tâm Tiệc cưới Grand Palace
+              Thứ 3, 11 tháng 08 năm 2026<br />
+              Full day - Tư gia nhà trai
             </p>
           </div>
 
