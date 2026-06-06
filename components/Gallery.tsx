@@ -48,6 +48,14 @@ const photos = [
     src: 'https://sf-static.upanhlaylink.com/img/image_20260604ef8f691b19eb44fad0c2deedf6cd10ec.jpg?auto=compress&cs=tinysrgb&w=800',
     thumb: 'https://sf-static.upanhlaylink.com/img/image_20260604ef8f691b19eb44fad0c2deedf6cd10ec.jpg?auto=compress&cs=tinysrgb&w=400',
   },
+  {
+    src: 'https://sf-static.upanhlaylink.com/img/image_202606063812cd832a8bca0254e270676e6d4d38.jpg?auto=compress&cs=tinysrgb&w=800',
+    thumb: 'https://sf-static.upanhlaylink.com/img/image_202606063812cd832a8bca0254e270676e6d4d38.jpg?auto=compress&cs=tinysrgb&w=400',
+  },
+  {
+    src: 'https://sf-static.upanhlaylink.com/img/image_20260606b026fde19dccbe37d6ff8b274ae925e5.jpg?auto=compress&cs=tinysrgb&w=800',
+    thumb: 'https://sf-static.upanhlaylink.com/img/image_20260606b026fde19dccbe37d6ff8b274ae925e5.jpg?auto=compress&cs=tinysrgb&w=400',
+  },
 ];
 
 const sections: Array<{ type: string; photos?: number[]; layout?: string; title?: string; text?: string }> = [
