@@ -21,5 +21,3 @@ export default function Hero() {
           style={{ background: 'rgba(0,0,0,0.25)' }}
         />
       </div>
-
-    
