@@ -20,7 +20,7 @@ const venues = [
     time: '18:00',
     date: 'Chủ Nhật, 26/07/2026',
     mapUrl:
-      '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5179.225872503015!2d106.69120001164896!3d10.821830458308005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317528edfe9be909%3A0xf26d8955dfb14ac6!2zTmjDoCBow6BuZyBWxrDhu51uIENhdQ!5e1!3m2!1svi!2s!4v1780730860799!5m2!1svi!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>',
+      '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5179.225872503015!2d106.69120001164896!3d10.821830458308005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317528edfe9be909%3A0xf26d8955dfb14ac6!2zTmjDoCBow6BuZyBWxrDhu51uIENhdQ!5e1!3m2!1svi!2s!4v1780730860799!5m2!1svi!2s',
     directionsUrl: 'https://maps.app.goo.gl/nhWZriq6fG25fryWA',
   },
   {
