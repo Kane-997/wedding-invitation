@@ -124,12 +124,12 @@ export default function Gallery() {
 
     if (layout === 'mixed') {
       return (
-        <div className="grid grid-cols-3 gap-3">
+        <div className="grid grid-cols-3 gap-4">
           {photoIndices.map((idx, i) => (
             <div
               key={idx}
               className={`overflow-hidden cursor-pointer rounded-sm ${
-                i === 2 ? 'col-span-2 h-160' : 'h-80'
+                i === 2 ? 'col-span-2 h-80' : 'h-80'
               }`}
               onClick={() => setLightbox(idx)}
             >
