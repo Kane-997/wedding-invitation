@@ -124,7 +124,7 @@ export default function Gallery() {
 
     if (layout === 'mixed') {
       return (
-        <div className="grid grid-cols-3 gap-4">
+        <div className="grid grid-cols-2 gap-3">
           {photoIndices.map((idx, i) => (
             <div
               key={idx}
