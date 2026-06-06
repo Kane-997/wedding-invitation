@@ -10,7 +10,7 @@ const accounts = [
     accountNumber: '172843409',
     accountName: 'Trần Nhật Hào',
     branch: 'Chi nhánh TP.HCM',
-    qr: 'https://img.vietqr.io/image/VCB-1234567890-compact2.png?amount=0&addInfo=Mung%20cuoi%20Minh%20Anh%20Quoc%20Huy&accountName=NGUYEN%20MINH%20ANH',
+    qr: 'https://sf-static.upanhlaylink.com/img/image_20260606e5b03095ef8469ea5a11578385f456cf.jpg',
   },
   {
     bank: 'Vietcom Bank',
@@ -18,7 +18,7 @@ const accounts = [
     accountNumber: '1028530394',
     accountName: 'MAI THI YEN NHI',
     branch: 'Chi nhánh TP.HCM',
-    qr: 'https://img.vietqr.io/image/MB-0987654321-compact2.png?amount=0&addInfo=Mung%20cuoi%20Minh%20Anh%20Quoc%20Huy&accountName=TRAN%20QUOC%20HUY',
+    qr: 'https://sf-static.upanhlaylink.com/img/image_20260606f35e21044f3c097ce04f9f89d67479be.jpg',
   },
 ];
 
