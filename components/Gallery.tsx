@@ -106,7 +106,7 @@ export default function Gallery() {
             {photoIndices.slice(1, 3).map((idx) => (
               <div
                 key={idx}
-                className="overflow-hidden cursor-pointer rounded-sm h-24"
+                className="overflow-hidden cursor-pointer rounded-sm h-60"
                 onClick={() => setLightbox(idx)}
               >
                 <img
