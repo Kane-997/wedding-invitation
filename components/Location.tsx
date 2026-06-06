@@ -20,7 +20,7 @@ const venues = [
     time: '18:00',
     date: 'Chủ Nhật, 26/07/2026',
     mapUrl:
-      '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5179.225872503015!2d106.69120001164896!3d10.821830458308005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317528edfe9be909%3A0xf26d8955dfb14ac6!2zTmjDoCBow6BuZyBWxrDhu51uIENhdQ!5e1!3m2!1svi!2s!4v1780730860799!5m2!1svi!2s',
+      'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5179.225872503015!2d106.69120001164896!3d10.821830458308005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317528edfe9be909%3A0xf26d8955dfb14ac6!2zTmjDoCBow6BuZyBWxrDhu51uIENhdQ!5e1!3m2!1svi!2s!4v1780730860799!5m2!1svi!2s',
     directionsUrl: 'https://maps.app.goo.gl/nhWZriq6fG25fryWA',
   },
   {
@@ -30,8 +30,8 @@ const venues = [
     time: '09:00',
     date: 'Thứ Ba, 11/08/2026',
     mapUrl:
-      'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.5!2d106.6954!3d10.7737!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752f3a9d8d1bb5%3A0x3b0786e7!2zTMOqIEzhu6dpLCBRdeG6rW4gMSwgSENN!5e0!3m2!1svi!2svn!4v1700000000000',
-    directionsUrl: 'https://maps.google.com/?q=10.7737,106.6954',
+      'https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d2598.2379051162434!2d105.68450275194073!3d9.773284995893485!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1svi!2s!4v1780731339054!5m2!1svi!2s',
+    directionsUrl: 'https://maps.app.goo.gl/VDDDLwQkcq6bSbmu7',
   },
 ];
 
