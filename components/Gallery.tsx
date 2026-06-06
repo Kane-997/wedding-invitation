@@ -6,7 +6,7 @@ import { X, ChevronLeft, ChevronRight } from 'lucide-react';
 const photos = [
   {
     src: 'https://sf-static.upanhlaylink.com/img/image_20260604b4b98cb0a20ce5429b15757850e5b643.jpg?auto=compress&cs=tinysrgb&w=800',
-    thumb: 'https://sf-static.upanhlaylink.com/img/image_20260604b4b98cb0a20ce5429b15757850e5b643.jpg?auto=compress&cs=tinysrgb&w=400',
+    thumb: 'https://sf-static.upanhlaylink.com/img/image_20260604b4b98cb0a20ce5429b15757850e5b643.jpg?auto=compress&cs=tinysrgb&w=800',
   },
   {
     src: 'https://sf-static.upanhlaylink.com/img/image_20260604696900d55b961dcabe358e29fce6f1d8.jpg?auto=compress&cs=tinysrgb&w=800',
