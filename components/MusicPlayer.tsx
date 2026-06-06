@@ -45,7 +45,7 @@ export default function MusicPlayer() {
 
   return (
     <>
-      <audio ref={audioRef} src={MUSIC_URL} preload="none" />
+      <audio ref={audioRef} src={MUSIC_URL} preload="auto" />
       <div className="fixed bottom-4 right-4 z-50">
         <button
           onClick={toggle}
