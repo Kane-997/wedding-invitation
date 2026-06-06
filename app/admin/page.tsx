@@ -10,6 +10,7 @@ interface RSVPData {
   attending: boolean;
   guests: number;
   message: string;
+  location?: string;
   created_at: string;
 }
 
@@ -55,12 +56,13 @@ export default function AdminPage() {
 
   const exportToCSV = () => {
     const csv = [
-      ['STT', 'Tên', 'Xác nhận', 'Số khách', 'Lời chúc', 'Ngày gửi'],
+      ['STT', 'Tên', 'Xác nhận', 'Số khách', 'Địa điểm', 'Lời chúc', 'Ngày gửi'],
       ...rsvpData.map((r, i) => [
         i + 1,
         r.name,
         r.attending ? 'Tham dự' : 'Không tham dự',
         r.guests || 0,
+        r.location || 'Sài Gòn',
         r.message || '',
         new Date(r.created_at).toLocaleDateString('vi-VN'),
       ]),
@@ -152,6 +154,9 @@ export default function AdminPage() {
                   Số khách
                 </th>
                 <th className="px-4 py-3 text-left font-sans text-xs uppercase tracking-wider" style={{ color: '#b8962e' }}>
+                  Địa điểm
+                </th>
+                <th className="px-4 py-3 text-left font-sans text-xs uppercase tracking-wider" style={{ color: '#b8962e' }}>
                   Lời chúc
                 </th>
                 <th className="px-4 py-3 text-left font-sans text-xs uppercase tracking-wider" style={{ color: '#b8962e' }}>
@@ -181,6 +186,9 @@ export default function AdminPage() {
                   </td>
                   <td className="px-4 py-3 text-center" style={{ color: '#5c3d1a' }}>
                     {rsvp.guests || '-'}
+                  </td>
+                  <td className="px-4 py-3" style={{ color: '#5c3d1a' }}>
+                    {rsvp.location || 'Sài Gòn'}
                   </td>
                   <td className="px-4 py-3 max-w-xs truncate" style={{ color: '#7a5c2e' }}>
                     {rsvp.message || <em>Không có</em>}

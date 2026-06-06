@@ -34,20 +34,16 @@ export default function Hero() {
           }}
         >
           <div className="text-center mb-6">
-            <p className="font-sans text-xs tracking-widest uppercase mb-3" style={{ color: '#b8962e' }}>
-              Trân trọng báo tin
+            <p className="font-sans text-xs tracking-widest uppercase mb-4" style={{ color: '#b8962e' }}>
+              A wedding story
             </p>
-            <h2 className="font-serif mb-3" style={{ fontSize: '1.5rem', fontWeight: 400, color: '#d4af37', lineHeight: 1.2 }}>
-              Lễ Thành Hôn
-            </h2>
-            <div className="gold-divider" />
-          </div>
-
-          <div className="text-center mb-6">
-            <p className="font-sans text-sm" style={{ color: '#7a5c2e' }}>của</p>
-            <h1 className="font-serif mb-3" style={{ fontSize: '1.5rem', fontWeight: 500, color: '#5c3d1a' }}>
+            <h1 className="font-serif mb-4" style={{ fontSize: '2rem', fontWeight: 300, color: '#5c3d1a', lineHeight: 1.2 }}>
               Nhật Hào & Nhi Mai
             </h1>
+            <p className="font-sans text-sm" style={{ color: '#d4af37', letterSpacing: '0.1em' }}>
+              19.07.2026
+            </p>
+            <div className="gold-divider mt-4" />
           </div>
 
           <div className="flex items-center justify-center gap-3 mb-6">

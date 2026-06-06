@@ -1,0 +1,1 @@
+ALTER TABLE rsvp ADD COLUMN location text DEFAULT 'Sài Gòn';

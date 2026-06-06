@@ -15,6 +15,7 @@ export type RSVPInsert = {
   attending: boolean;
   guests: number;
   message: string;
+  location?: string;
 };
 
 export type GuestbookInsert = {

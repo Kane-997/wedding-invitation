@@ -10,6 +10,7 @@ const initialForm: RSVPInsert = {
   attending: true,
   guests: 0,
   message: '',
+  location: 'Sài Gòn',
 };
 
 export default function RSVP() {
@@ -119,25 +120,45 @@ export default function RSVP() {
               </div>
 
               {form.attending && (
-                <div>
-                  <label className="font-sans text-xs tracking-widest uppercase block mb-2" style={{ color: '#b8962e' }}>
-                    Số khách đi cùng
-                  </label>
-                  <select
-                    value={form.guests}
-                    onChange={(e) => setForm({ ...form, guests: Number(e.target.value) })}
-                    className={inputClass}
-                    style={inputStyle}
-                    onFocus={(e) => (e.target.style.borderColor = '#d4af37')}
-                    onBlur={(e) => (e.target.style.borderColor = '#e8d5a3')}
-                  >
-                    {[0, 1, 2, 3, 4, 5].map((n) => (
-                      <option key={n} value={n}>
-                        {n === 0 ? 'Chỉ mình tôi' : `+${n} người`}
-                      </option>
-                    ))}
-                  </select>
-                </div>
+                <>
+                  <div>
+                    <label className="font-sans text-xs tracking-widest uppercase block mb-2" style={{ color: '#b8962e' }}>
+                      Số khách đi cùng
+                    </label>
+                    <select
+                      value={form.guests}
+                      onChange={(e) => setForm({ ...form, guests: Number(e.target.value) })}
+                      className={inputClass}
+                      style={inputStyle}
+                      onFocus={(e) => (e.target.style.borderColor = '#d4af37')}
+                      onBlur={(e) => (e.target.style.borderColor = '#e8d5a3')}
+                    >
+                      {[0, 1, 2, 3, 4, 5].map((n) => (
+                        <option key={n} value={n}>
+                          {n === 0 ? 'Chỉ mình tôi' : `+${n} người`}
+                        </option>
+                      ))}
+                    </select>
+                  </div>
+
+                  <div>
+                    <label className="font-sans text-xs tracking-widest uppercase block mb-2" style={{ color: '#b8962e' }}>
+                      Địa điểm tham dự
+                    </label>
+                    <select
+                      value={form.location || 'Sài Gòn'}
+                      onChange={(e) => setForm({ ...form, location: e.target.value })}
+                      className={inputClass}
+                      style={inputStyle}
+                      onFocus={(e) => (e.target.style.borderColor = '#d4af37')}
+                      onBlur={(e) => (e.target.style.borderColor = '#e8d5a3')}
+                    >
+                      <option value="Quy Nhơn">Quy Nhơn</option>
+                      <option value="Sài Gòn">Sài Gòn</option>
+                      <option value="Hậu Giang">Hậu Giang</option>
+                    </select>
+                  </div>
+                </>
               )}
 
               <div>
