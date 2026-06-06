@@ -5,23 +5,23 @@ import { MapPin, Clock, Calendar } from 'lucide-react';
 const venues = [
   {
     title: 'Lễ Vu Quy',
-    subtitle: 'Nhà gái',
-    address: '123 Nguyễn Huệ, Phường Bến Nghé, Quận 1, TP.HCM',
-    time: '08:00 — 10:00',
-    date: 'Thứ Bảy, 15/02/2025',
+    subtitle: 'Nhà hàng tiệc cưới Grand Palace (Sáu Cao 2)',
+    address: 'Cầu Hà Thanh 2, Phường Quy Nhơn, Tỉnh Gia Lai',
+    time: '17h30',
+    date: 'Chủ Nhật, 19/07/2026',
     mapUrl:
-      'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.4547!2d106.7028!3d10.7769!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752f3a9d8d1bb5%3A0x3b0786e7!2zTmd1eeG7hW4gSHXhu4csIFF14bqtbiAxLCBI4buTIENow60gTWluaA!5e0!3m2!1svi!2svn!4v1700000000000',
-    directionsUrl: 'https://maps.google.com/?q=10.7769,106.7028',
+      '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5121.061892682316!2d109.21558885130312!3d13.787749262049624!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x316f6b62562a5253%3A0x7262732c53d33395!2sS%C3%A1u%20Cao%202%20Restaurant!5e1!3m2!1svi!2s!4v1780730720990!5m2!1svi!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>',
+    directionsUrl: 'https://maps.app.goo.gl/6T2GQN324Mk5oQCa6',
   },
   {
-    title: 'Tiệc Cưới',
-    subtitle: 'Trung tâm tiệc cưới',
-    address: 'Capella Wedding Center, 456 Lê Lợi, Quận 1, TP.HCM',
-    time: '11:00 — 14:00',
-    date: 'Thứ Bảy, 15/02/2025',
+    title: 'Tiệc Báo Hỷ',
+    subtitle: 'Trung tâm tiệc cưới Vườn Cau',
+    address: '360 Đ. Phan Văn Trị, Bình Lợi Trung, TP. Hồ Chí Minh',
+    time: '18:00',
+    date: 'Chủ Nhật, 26/07/2026',
     mapUrl:
-      'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.5!2d106.6954!3d10.7737!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752f3a9d8d1bb5%3A0x3b0786e7!2zTMOqIEzhu6dpLCBRdeG6rW4gMSwgSENN!5e0!3m2!1svi!2svn!4v1700000000000',
-    directionsUrl: 'https://maps.google.com/?q=10.7737,106.6954',
+      '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5179.225872503015!2d106.69120001164896!3d10.821830458308005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317528edfe9be909%3A0xf26d8955dfb14ac6!2zTmjDoCBow6BuZyBWxrDhu51uIENhdQ!5e1!3m2!1svi!2s!4v1780730860799!5m2!1svi!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>',
+    directionsUrl: 'https://maps.app.goo.gl/nhWZriq6fG25fryWA',
   },
   {
     title: 'Tân Hôn',
