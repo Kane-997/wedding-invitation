@@ -56,6 +56,18 @@ const photos = [
     src: 'https://sf-static.upanhlaylink.com/img/image_20260606b026fde19dccbe37d6ff8b274ae925e5.jpg?auto=compress&cs=tinysrgb&w=800',
     thumb: 'https://sf-static.upanhlaylink.com/img/image_20260606b026fde19dccbe37d6ff8b274ae925e5.jpg?auto=compress&cs=tinysrgb&w=400',
   },
+  {
+    src: 'https://sf-static.upanhlaylink.com/img/image_202606064985f4ccf7634a1bb17b75312d91be11.jpg?auto=compress&cs=tinysrgb&w=800',
+    thumb: 'https://sf-static.upanhlaylink.com/img/image_202606064985f4ccf7634a1bb17b75312d91be11.jpg?auto=compress&cs=tinysrgb&w=400',
+  },
+  {
+    src: 'https://sf-static.upanhlaylink.com/img/image_202606067a046a662c0d97553a1bb80a6e906b40.jpg?auto=compress&cs=tinysrgb&w=800',
+    thumb: 'https://sf-static.upanhlaylink.com/img/image_202606067a046a662c0d97553a1bb80a6e906b40.jpg?auto=compress&cs=tinysrgb&w=400',
+  },
+  {
+    src: 'https://sf-static.upanhlaylink.com/img/image_202606060c413f10a6d8b0648a2554de2fe2a15c.jpg?auto=compress&cs=tinysrgb&w=800',
+    thumb: 'https://sf-static.upanhlaylink.com/img/image_202606060c413f10a6d8b0648a2554de2fe2a15c.jpg?auto=compress&cs=tinysrgb&w=400',
+  },
 ];
 
 const sections: Array<{ type: string; photos?: number[]; layout?: string; title?: string; text?: string }> = [
@@ -81,7 +93,7 @@ const sections: Array<{ type: string; photos?: number[]; layout?: string; title?
   },
   {
     type: 'gallery',
-    photos: [2, 3, 4, 5, 6, 7, 8, 9, 10],
+    photos: [13, 14, 15, 5, 6, 7, 8, 9, 10],
     layout: 'mixed',
   },
 ];
