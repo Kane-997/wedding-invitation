@@ -129,14 +129,14 @@ export default function Gallery() {
             <div
               key={idx}
               className={`overflow-hidden cursor-pointer rounded-sm ${
-                i === 2 ? 'col-span-2 h-80' : 'h-32'
+                i === 2 ? 'col-span-2 h-80' : 'h-auto'
               }`}
               onClick={() => setLightbox(idx)}
             >
               <img
                 src={photos[idx].thumb}
                 alt={`Wedding photo ${idx + 1}`}
-                className="w-full h-full object-cover object-top"
+                className="w-full h-auto object-cover object-top"
                 loading="lazy"
               />
             </div>
