@@ -34,7 +34,7 @@ export default function Invitation() {
               Lễ Vu Quy
             </p>
             <p className="font-serif text-lg" style={{ color: '#5c3d1a' }}>
-              Nhật Hào & Nhi Mai
+              Nhi Mai & Nhật Hào
             </p>
             <p className="font-sans text-sm mt-2" style={{ color: '#7a5c2e' }}>
               Chủ Nhật, 19 tháng 07 năm 2026<br />
