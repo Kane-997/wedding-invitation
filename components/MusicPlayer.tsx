@@ -30,18 +30,15 @@ export default function MusicPlayer() {
     audio.volume = 0.35;
     audio.loop = true;
 
-    // Auto-play on first visit
-    const hasVisited = sessionStorage.getItem('visited');
-    if (!hasVisited) {
-      audio.play().then(() => {
-        setPlaying(true);
-        setStarted(true);
-        sessionStorage.setItem('visited', 'true');
-      }).catch(() => {
-        sessionStorage.setItem('visited', 'true');
-      });
-    }
-  }, []);
+     audio.play()
+    .then(() => {
+      setPlaying(true);
+      setStarted(true);
+    })
+    .catch((err) => {
+      console.log('Autoplay blocked:', err);
+    });
+}, []);
 
   return (
     <>
