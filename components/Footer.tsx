@@ -17,16 +17,16 @@ export default function Footer() {
       </p>
 
       <p className="font-sans text-xs italic" style={{ color: '#9a7a3a' }}>
-        "Tình yêu nhẫn nhục, tình yêu nhân từ, tình yêu không ghen tị..."
+        "Tình yêu đích thực không phải là nhìn chằm chằm vào nhau, mà là cùng nhau nhìn về một hướng."
       </p>
       <p className="font-sans text-xs mt-1" style={{ color: '#b8962e' }}>
-        — 1 Cô-rinh-tô 13:4
+        — Antoine de Saint-Exupéry
       </p>
 
       <div className="gold-divider mt-4 mb-3" />
 
       <p className="font-sans text-xs" style={{ color: '#c9a84c', opacity: 0.7 }}>
-        Được tạo với <Heart fill="#d4af37" stroke="#d4af37" size={10} className="inline" /> dành riêng
+        Được tạo với <Heart fill="#d4af37" stroke="#d4af37" size={10} className="inline" /> dành riêng cho đám cưới Hào & Nhi
       </p>
     </footer>
   );
