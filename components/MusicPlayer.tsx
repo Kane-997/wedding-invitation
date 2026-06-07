@@ -30,18 +30,26 @@ export default function MusicPlayer() {
     audio.volume = 0.35;
     audio.loop = true;
 
-    // Auto-play on first visit
-    const hasVisited = sessionStorage.getItem('visited');
-    if (!hasVisited) {
-      audio.play().then(() => {
+ const startMusic = () => {
+    audio.play()
+      .then(() => {
         setPlaying(true);
         setStarted(true);
-        sessionStorage.setItem('visited', 'true');
-      }).catch(() => {
-        sessionStorage.setItem('visited', 'true');
-      });
-    }
-  }, []);
+      })
+      .catch(console.error);
+
+    document.removeEventListener('click', startMusic);
+    document.removeEventListener('touchstart', startMusic);
+  };
+
+  document.addEventListener('click', startMusic);
+  document.addEventListener('touchstart', startMusic);
+
+  return () => {
+    document.removeEventListener('click', startMusic);
+    document.removeEventListener('touchstart', startMusic);
+  };
+}, []);
 
   return (
     <>
