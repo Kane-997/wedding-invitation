@@ -8,7 +8,7 @@ export default function MusicPlayer() {
   const [playing, setPlaying] = useState(false);
   const [started, setStarted] = useState(false);
 
-  const MUSIC_URL = '/audio/Mot-Doi.mp3';
+  const MUSIC_URL = '/audio/Mot-doi.mp3';
 
   const toggle = () => {
     const audio = audioRef.current;
