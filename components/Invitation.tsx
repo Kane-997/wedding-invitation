@@ -20,7 +20,7 @@ export default function Invitation() {
 
         <div className="space-y-4">
           <div
-  className="rounded-md p-5 transition-all duration-300 hover:-translate-y-1"
+  className="rounded-md p-5 transition-all duration-300 hover:-translate-y-1 hover:border-yellow-500"
    style={{
     background: 'rgba(255,255,255,0.85)',
     border: '1px solid #e8d5a3',
@@ -44,7 +44,7 @@ export default function Invitation() {
         </div>
         <div className="space-y-4">
           <div
-  className="rounded-md p-5 transition-all duration-300 hover:-translate-y-1"
+  className="rounded-md p-5 transition-all duration-300 hover:-translate-y-1 hover:border-yellow-500"
    style={{
     background: 'rgba(255,255,255,0.85)',
     border: '1px solid #e8d5a3',
@@ -68,7 +68,7 @@ export default function Invitation() {
         </div>
         <div className="space-y-4">
           <div
-  className="rounded-md p-5 transition-all duration-300 hover:-translate-y-1"
+  className="rounded-md p-5 transition-all duration-300 hover:-translate-y-1 hover:border-yellow-500"
    style={{
     background: 'rgba(255,255,255,0.85)',
     border: '1px solid #e8d5a3',
