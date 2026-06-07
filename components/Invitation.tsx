@@ -19,7 +19,17 @@ export default function Invitation() {
         </p>
 
         <div className="space-y-4">
-          <div className="rounded-sm p-4" style={{ background: 'rgba(255,255,255,0.8)', border: '1px solid #e8d5a3' }}>
+          <div
+  className="rounded-xl p-5 transition-all duration-300 hover:-translate-y-1"
+  style={{
+    background: 'rgba(255,255,255,0.85)',
+    border: '1px solid #e8d5a3',
+    boxShadow: `
+      0 8px 30px rgba(212,175,55,0.12),
+      0 2px 8px rgba(0,0,0,0.04)
+    `,
+  }}
+>
             <p className="font-sans text-xs uppercase tracking-wider mb-2" style={{ color: '#b8962e' }}>
               Lễ Vu Quy
             </p>
@@ -33,7 +43,17 @@ export default function Invitation() {
           </div>
         </div>
         <div className="space-y-4">
-          <div className="rounded-sm p-4" style={{ background: 'rgba(255,255,255,0.8)', border: '1px solid #e8d5a3' }}>
+          <div
+  className="rounded-xl p-5 transition-all duration-300 hover:-translate-y-1"
+  style={{
+    background: 'rgba(255,255,255,0.85)',
+    border: '1px solid #e8d5a3',
+    boxShadow: `
+      0 8px 30px rgba(212,175,55,0.12),
+      0 2px 8px rgba(0,0,0,0.04)
+    `,
+  }}
+>
             <p className="font-sans text-xs uppercase tracking-wider mb-2" style={{ color: '#b8962e' }}>
               Lễ Báo Hỷ
             </p>
@@ -47,7 +67,17 @@ export default function Invitation() {
           </div>
         </div>
         <div className="space-y-4">
-          <div className="rounded-sm p-4" style={{ background: 'rgba(255,255,255,0.8)', border: '1px solid #e8d5a3' }}>
+          <div
+  className="rounded-xl p-5 transition-all duration-300 hover:-translate-y-1"
+  style={{
+    background: 'rgba(255,255,255,0.85)',
+    border: '1px solid #e8d5a3',
+    boxShadow: `
+      0 8px 30px rgba(212,175,55,0.12),
+      0 2px 8px rgba(0,0,0,0.04)
+    `,
+  }}
+>
             <p className="font-sans text-xs uppercase tracking-wider mb-2" style={{ color: '#b8962e' }}>
               Lễ Thành Hôn
             </p>
