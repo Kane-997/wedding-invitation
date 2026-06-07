@@ -8,7 +8,7 @@ export default function MusicPlayer() {
   const [playing, setPlaying] = useState(false);
   const [started, setStarted] = useState(false);
 
-  const MUSIC_URL = '/audio/Mot-doi.mp3';
+  const MUSIC_URL = 'https://cdn.pixabay.com/download/audio/2022/02/15/audio_d3c4eccd51.mp3';
 
   const toggle = () => {
     const audio = audioRef.current;
@@ -30,26 +30,18 @@ export default function MusicPlayer() {
     audio.volume = 0.35;
     audio.loop = true;
 
- const startMusic = () => {
-    audio.play()
-      .then(() => {
+    // Auto-play on first visit
+    const hasVisited = sessionStorage.getItem('visited');
+    if (!hasVisited) {
+      audio.play().then(() => {
         setPlaying(true);
         setStarted(true);
-      })
-      .catch(console.error);
-
-    document.removeEventListener('click', startMusic);
-    document.removeEventListener('touchstart', startMusic);
-  };
-
-  document.addEventListener('click', startMusic);
-  document.addEventListener('touchstart', startMusic);
-
-  return () => {
-    document.removeEventListener('click', startMusic);
-    document.removeEventListener('touchstart', startMusic);
-  };
-}, []);
+        sessionStorage.setItem('visited', 'true');
+      }).catch(() => {
+        sessionStorage.setItem('visited', 'true');
+      });
+    }
+  }, []);
 
   return (
     <>
