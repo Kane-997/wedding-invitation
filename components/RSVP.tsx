@@ -59,7 +59,7 @@ export default function RSVP() {
           </h2>
           <div className="gold-divider mb-4" />
           <p className="font-sans text-sm" style={{ color: '#7a5c2e', lineHeight: 1.6 }}>
-            Vui lòng xác nhận trước ngày <strong>06/07/2026</strong> để chúng tôi có thể chuẩn bị tốt nhất.
+            Vui lòng xác nhận trước ngày <strong>06/07/2026</strong> để chúng mình có thể chuẩn bị tốt nhất.
           </p>
         </div>
 
@@ -71,7 +71,7 @@ export default function RSVP() {
                 Cảm ơn bạn!
               </h3>
               <p className="font-sans text-sm" style={{ color: '#7a5c2e', lineHeight: 1.8 }}>
-                Chúng tôi đã nhận được xác nhận của bạn. <br />
+                Chúng mình đã nhận được xác nhận của bạn. <br />
                 Mong chờ được gặp bạn trong ngày trọng đại!
               </p>
             </div>
