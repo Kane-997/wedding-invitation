@@ -48,6 +48,15 @@ export default function Wishes() {
     const interval = setInterval(fetchWishes, 5000);
     return () => clearInterval(interval);
   }, []);
+  useEffect(() => {
+  if (wishes.length <= 1) return;
+
+  const timer = setInterval(() => {
+    setCurrent((prev) => (prev + 1) % wishes.length);
+  }, 5000); // 5 giây đổi 1 lời chúc
+
+  return () => clearInterval(timer);
+}, [wishes]);
 
   const formatDate = (d: string) =>
     new Date(d).toLocaleDateString('vi-VN', {
