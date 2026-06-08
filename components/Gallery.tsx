@@ -194,7 +194,7 @@ export default function Gallery() {
       <div className="max-w-lg mx-auto">
         <div className="text-center mb-12">
           <p className="font-sans text-xs tracking-[0.4em] uppercase mb-4" style={{ color: '#b8962e' }}>
-            Khoảnh khắc của chúng tôi
+            Khoảnh khắc của chúng mình
           </p>
           <h2 className="font-serif text-3xl mb-3" style={{ fontWeight: 300, color: '#5c3d1a' }}>
             Bộ ảnh cưới
