@@ -20,7 +20,7 @@ export default function Hero() {
         />
       </div>
 
-      <div className="relative z-10 text-center px-4">
+      <div className="relative z-10 text-center px-4 pb-16">
         <p className="font-sans text-sm tracking-widest uppercase mb-6" style={{ color: 'rgba(255,255,255,0.8)' }}>
           Save the date
         </p>
@@ -31,7 +31,7 @@ export default function Hero() {
           & Nhi Mai
         </h1>
 
-        <div className="w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-8" style={{ background: 'rgba(212,175,55,0.2)', border: '2px solid rgba(212,175,55,0.5)' }}>
+        <div className="w-12 h-12 rounded-full flex items-center justify-end mx-auto mb-8" style={{ background: 'rgba(212,175,55,0.2)', border: '2px solid rgba(212,175,55,0.5)' }}>
           <span style={{ fontSize: '20px', color: 'rgba(212,175,55,0.7)' }}>💕</span>
         </div>
 
