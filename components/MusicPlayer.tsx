@@ -30,25 +30,14 @@ export default function MusicPlayer() {
     audio.volume = 0.35;
     audio.loop = true;
 
-    const startMusic = () => {
-    audio.play()
-      .then(() => {
-        setPlaying(true);
-        setStarted(true);
-      })
-      .catch(console.error);
-
-    document.removeEventListener('click', startMusic);
-    document.removeEventListener('touchstart', startMusic);
-  };
-
-  document.addEventListener('click', startMusic);
-  document.addEventListener('touchstart', startMusic);
-
-  return () => {
-    document.removeEventListener('click', startMusic);
-    document.removeEventListener('touchstart', startMusic);
-  };
+     audio.play()
+    .then(() => {
+      setPlaying(true);
+      setStarted(true);
+    })
+    .catch((err) => {
+      console.log('Autoplay blocked:', err);
+    });
 }, []);
 
   return (
