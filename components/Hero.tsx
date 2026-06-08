@@ -4,7 +4,7 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden"
+      className="relative min-h-screen flex flex-col items-center justify-end overflow-hidden"
       style={{ background: '#ffffff' }}
     >
       <div className="absolute inset-0 z-0">
