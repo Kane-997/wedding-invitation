@@ -20,7 +20,7 @@ export default function Hero() {
         />
       </div>
 
-      <div className="relative z-10 text-center px-4 pb-32">
+      <div className="relative z-10 text-center px-4 pb-24">
         <p className="font-sans text-sm tracking-widest uppercase mb-6" style={{ color: 'rgba(255,255,255,0.8)' }}>
           Save the date
         </p>
