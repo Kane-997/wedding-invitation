@@ -90,9 +90,13 @@ export default function Wishes() {
             <div
               className="rounded-sm p-6 text-center transition-all duration-500 relative min-h-56 flex flex-col items-center justify-center"
               style={{
-                background: 'rgba(255,255,255,0.8)',
-                border: '1px solid #e8d5a3',
-              }}
+  background: 'rgba(255,255,255,0.9)',
+  border: '1px solid #e8d5a3',
+  boxShadow: `
+    0 10px 30px rgba(212,175,55,0.12),
+    0 4px 12px rgba(0,0,0,0.04)
+  `,
+}}
             >
               <div className="mb-4">
                 <div
