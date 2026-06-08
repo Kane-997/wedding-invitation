@@ -8,7 +8,7 @@ const initialForm: RSVPInsert = {
   name: '',
   email: '',
   attending: true,
-  guests: 0,
+  guests: 1,
   message: '',
   location: 'Sài Gòn',
 };
