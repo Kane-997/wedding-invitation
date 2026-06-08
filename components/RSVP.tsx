@@ -135,7 +135,7 @@ export default function RSVP() {
                     >
                       {[0, 1, 2, 3, 4, 5].map((n) => (
                         <option key={n} value={n}>
-                          {n === 1 ? 'Chỉ mình tôi' : `+${n} người`}
+                          {n === 0 ? 'Chỉ mình tôi' : `+${n} người`}
                         </option>
                       ))}
                     </select>
