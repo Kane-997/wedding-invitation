@@ -112,7 +112,17 @@ export default function Wishes() {
                   {formatDate(wishes[current]?.created_at)}
                 </p>
               </div>
-
+<div
+  className="absolute top-4 left-4 font-serif"
+  style={{
+    fontSize: '64px',
+    color: '#d4af37',
+    opacity: 0.15,
+    lineHeight: 1,
+  }}
+>
+  "
+</div>
               <p className="font-sans text-sm leading-relaxed px-4 italic" style={{ color: '#7a5c2e' }}>
                 "{wishes[current]?.message}"
               </p>
