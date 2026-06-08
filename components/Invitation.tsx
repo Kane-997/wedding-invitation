@@ -91,7 +91,7 @@ export default function Invitation() {
           </div>
 
           <p className="font-sans text-xs leading-relaxed" style={{ color: '#9a7a3a' }}>
-            Sự hiện diện của bạn là niềm hạnh phúc lớn lao đối với chúng tôi.<br />
+            Sự hiện diện của bạn là niềm hạnh phúc lớn lao đối với chúng mình.<br />
             Mong chờ được gặp gỡ bạn trong ngày trọng đại này.
           </p>
         </div>
