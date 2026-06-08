@@ -25,7 +25,7 @@ export default function Wishes() {
           .not('message', 'is', null)
           .neq('message', '')
           .order('created_at', { ascending: false })
-          .limit(50);
+          .limit(15);
 
         if (data) {
           setWishes(
