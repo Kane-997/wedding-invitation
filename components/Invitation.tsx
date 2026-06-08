@@ -72,9 +72,27 @@ export default function Invitation() {
     `,
   }}
 >
-            <p className="font-sans text-xs uppercase tracking-wider mb-2" style={{ color: '#b8962e' }}>
-              Lễ Báo Hỷ
-            </p>
+           <div className="flex items-center justify-center gap-3 mb-4">
+  <div
+    className="h-px w-10"
+    style={{ background: '#d4af37', opacity: 0.5 }}
+  />
+  
+  <p
+    className="font-serif text-xl uppercase tracking-[0.15em]"
+    style={{
+      color: '#b8962e',
+      fontWeight: 500,
+    }}
+  >
+    Lễ Báo Hỷ
+  </p>
+
+  <div
+    className="h-px w-10"
+    style={{ background: '#d4af37', opacity: 0.5 }}
+  />
+</div>
             <p className="font-serif text-lg" style={{ color: '#5c3d1a' }}>
               Nhật Hào & Nhi Mai
             </p>
@@ -96,9 +114,27 @@ export default function Invitation() {
     `,
   }}
 >
-            <p className="font-sans text-xs uppercase tracking-wider mb-2" style={{ color: '#b8962e' }}>
-              Lễ Thành Hôn
-            </p>
+            <div className="flex items-center justify-center gap-3 mb-4">
+  <div
+    className="h-px w-10"
+    style={{ background: '#d4af37', opacity: 0.5 }}
+  />
+  
+  <p
+    className="font-serif text-xl uppercase tracking-[0.15em]"
+    style={{
+      color: '#b8962e',
+      fontWeight: 500,
+    }}
+  >
+    Lễ Thành Hôn
+  </p>
+
+  <div
+    className="h-px w-10"
+    style={{ background: '#d4af37', opacity: 0.5 }}
+  />
+</div>
             <p className="font-serif text-lg" style={{ color: '#5c3d1a' }}>
               Nhật Hào & Nhi Mai
             </p>
