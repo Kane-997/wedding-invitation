@@ -15,7 +15,7 @@ export default function Invitation() {
         <div className="gold-divider mb-6" />
 
         <p className="font-serif text-lg italic mb-4" style={{ color: '#5c3d1a', lineHeight: 1.8 }}>
-          "Chúng tôi xin trân trọng kính mời quý vị đến dự lễ cưới của chúng tôi"
+          "Chúng mình xin trân trọng kính mời bạn đến dự lễ cưới của chúng mình"
         </p>
 
         <div className="space-y-4">
