@@ -4,7 +4,7 @@ import type { Metadata } from 'next';
 export const metadata: Metadata = {
   metadataBase: new URL('https://wedding.example.com'),
   title: 'Nhật Hào & Nhi Mai — 19.07.2026',
-  description: 'Trân trọng kính mời bạn đến dự lễ cưới của chúng tôi',
+  description: 'Trân trọng kính mời bạn đến dự lễ cưới của chúng mình',
   openGraph: {
     title: 'Nhật Hào & Nhi Mai — 19.07.2026',
     description: 'Trân trọng kính mời bạn đến dự lễ cưới của chúng tôi',
