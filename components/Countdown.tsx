@@ -47,7 +47,7 @@ export default function Countdown() {
           Đếm ngược đến ngày trọng đại
         </p>
         <h2 className="font-serif text-3xl mb-3" style={{ fontWeight: 300, color: '#5c3d1a' }}>
-          {time.past ? 'Chúng tôi đã kết hôn!' : 'Ngày cưới'}
+          {time.past ? 'Chúng mình đã kết hôn!' : 'Ngày cưới'}
         </h2>
         <div className="gold-divider mb-8" />
 
@@ -60,7 +60,7 @@ export default function Countdown() {
           </div>
         ) : (
           <p className="font-serif text-xl italic" style={{ color: '#8a6820' }}>
-            Cảm ơn tất cả đã cùng chúng tôi chia sẻ ngày đặc biệt này
+            Cảm ơn tất cả đã cùng chúng mình chia sẻ ngày đặc biệt này
           </p>
         )}
 
