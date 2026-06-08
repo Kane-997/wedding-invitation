@@ -20,12 +20,12 @@ export default function Hero() {
         />
       </div>
 
-      <div className="relative z-10 text-center px-4 pb-24">
+      <div className="relative z-10 text-center px-4 pb-26">
         <p className="font-sans text-sm tracking-widest uppercase mb-6" style={{ color: 'rgba(255,255,255,0.8)' }}>
           Save the date
         </p>
 
-        <h1 className="font-serif text-5xl md:text-5xl mb-8" style={{ fontWeight: 300, color: 'white', lineHeight: 1.3 }}>
+        <h1 className="font-serif text-4xl md:text-5xl mb-8" style={{ fontWeight: 300, color: 'white', lineHeight: 1.3 }}>
           Nhật Hào
           <br />
           & Nhi Mai
