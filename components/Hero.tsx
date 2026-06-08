@@ -25,7 +25,7 @@ export default function Hero() {
           Save the date
         </p>
 
-        <h1 className="font-serif text-5xl md:text-5xl mb-8" style={{ fontWeight: 500, color: 'white', lineHeight: 1.4 }}>
+        <h1 className="font-serif text-5xl md:text-5xl mb-8" style={{ fontWeight: 400, color: 'white', lineHeight: 1.4 }}>
           Nhật Hào
           <br />
           & Nhi Mai
