@@ -153,9 +153,9 @@ export default function RSVP() {
                       onFocus={(e) => (e.target.style.borderColor = '#d4af37')}
                       onBlur={(e) => (e.target.style.borderColor = '#e8d5a3')}
                     >
-                      <option value="Quy Nhơn">Quy Nhơn</option>
-                      <option value="Sài Gòn">Sài Gòn</option>
-                      <option value="Hậu Giang">Hậu Giang</option>
+                      <option value="Quy Nhơn">Quy Nhơn (19/07/2026)</option>
+                      <option value="Sài Gòn">Sài Gòn (26/07/2026) </option>
+                      <option value="Hậu Giang">Hậu Giang (11/08/2026) </option>
                     </select>
                   </div>
                 </>
