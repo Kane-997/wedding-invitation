@@ -30,8 +30,8 @@ const venues = [
     time: '09:00',
     date: 'Thứ Ba, 11/08/2026',
     mapUrl:
-      'https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d2598.2379051162434!2d105.68450275194073!3d9.773284995893485!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1svi!2s!4v1780731339054!5m2!1svi!2s',
-    directionsUrl: 'https://maps.app.goo.gl/VDDDLwQkcq6bSbmu7',
+      'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d795.2939114237568!2d105.6861977991107!3d9.772528612229994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31a0f100774490f1%3A0xbfc0d043f3d05afd!2zVsaw4budbiBTZW4gMTE3!5e1!3m2!1svi!2s!4v1782787366745!5m2!1svi!2s',
+    directionsUrl: 'https://maps.app.goo.gl/ZetpMryJ3QivajaUA',
   },
 ];
 
