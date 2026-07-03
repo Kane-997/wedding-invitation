@@ -54,7 +54,7 @@ export default function Wishes() {
 
     const timer = setInterval(() => {
       setCurrent((prev) => (prev + 1) % wishes.length);
-    }, 5000);
+    }, 15000);
 
     return () => clearInterval(timer);
   }, [wishes]);
