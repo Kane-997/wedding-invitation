@@ -98,7 +98,7 @@ export default function Invitation() {
             </p>
             <p className="font-sans text-sm mt-2" style={{ color: '#7a5c2e' }}>
               Chủ Nhật, 26 tháng 07 năm 2026<br />
-              18:00 — Nhà hàng Vườn Cau Gò Vấp
+              18:00 — Nhà hàng Vườn Cau Gò Vấp (Sảnh 7, Lily)
             </p>
           </div>
         </div>
