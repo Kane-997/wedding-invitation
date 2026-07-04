@@ -25,7 +25,7 @@ export default function Wishes() {
           .not('message', 'is', null)
           .neq('message', '')
           .order('created_at', { ascending: false })
-          .limit(30);
+          .limit(10);
 
         if (data) {
           setWishes(
@@ -54,7 +54,7 @@ export default function Wishes() {
 
     const timer = setInterval(() => {
       setCurrent((prev) => (prev + 1) % wishes.length);
-    }, 15000);
+    }, 5000);
 
     return () => clearInterval(timer);
   }, [wishes]);
